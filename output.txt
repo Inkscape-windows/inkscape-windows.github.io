@@ -1,0 +1,1 @@
+{"text_string":"# robots.txt for https://inkscape-windows.github.io\nUser-agent: *\nAllow: /\n\n# Optional: do not index internal well-known endpoints\nDisallow: /.well-known/\n\nSitemap: https://inkscape-windows.github.io/sitemap.xml\n"}

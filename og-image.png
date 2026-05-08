@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B2B51"/>
+      <stop offset="100%" stop-color="#2664AE"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0B2B51" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#g)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1100" cy="90" r="120" fill="#FFBF47" opacity="0.12"/>
+  <circle cx="1080" cy="520" r="80" fill="#FFFFFF" opacity="0.06"/>
+
+  <!-- Icon: simplified pen nib with node -->
+  <g transform="translate(140,160) scale(1.2)" filter="url(#shadow)">
+    <path d="M320 0 L450 190 L320 500 L190 190 Z" fill="#FFFFFF"/>
+    <circle cx="320" cy="260" r="34" fill="#FFFFFF"/>
+    <circle cx="320" cy="260" r="24" fill="#0B2B51" stroke="#FFBF47" stroke-width="10"/>
+    <path d="M120 120 C 210 120, 260 90, 320 90" fill="none" stroke="#FFBF47" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="120" cy="120" r="10" fill="#FFBF47"/>
+  </g>
+
+  <!-- Headline & subline -->
+  <g fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif">
+    <text x="580" y="240" font-size="56" font-weight="700">Inkscape for Windows</text>
+    <text x="580" y="304" font-size="30" opacity="0.9">Official MSI • Safe Download • Free & Open Source</text>
+    <text x="580" y="360" font-size="22" opacity="0.85">Windows 10/11 (x64)</text>
+  </g>
+
+  <!-- CTA style bar -->
+  <g transform="translate(580,400)">
+    <rect x="0" y="0" rx="12" ry="12" width="480" height="70" fill="#FFFFFF" opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.25"/>
+    <g transform="translate(20,22)" fill="#FFFFFF">
+      <circle cx="0" cy="12" r="6" fill="#FFBF47"/>
+      <rect x="16" y="0" width="360" height="8" rx="4" opacity="0.9"/>
+      <rect x="16" y="18" width="300" height="8" rx="4" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- Footer note -->
+  <g fill="#FFFFFF" font-family="Segoe UI, Arial, sans-serif" opacity="0.7">
+    <text x="140" y="560" font-size="18">Unofficial fan page linking to official Inkscape installers</text>
+  </g>
+</svg>

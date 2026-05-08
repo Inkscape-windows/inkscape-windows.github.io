@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B2B51"/>
+      <stop offset="100%" stop-color="#2664AE"/>
+    </linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.2" flood-color="#0B2B51" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <!-- Background rounded square -->
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="url(#bg)"/>
+
+  <!-- Simple pen nib (white) -->
+  <g filter="url(#s)">
+    <path d="M32 10 L44 28 L32 54 L20 28 Z" fill="#FFFFFF"/>
+    <!-- Node hole accent -->
+    <circle cx="32" cy="32" r="6" fill="#FFFFFF"/>
+    <circle cx="32" cy="32" r="4" fill="#0B2B51" stroke="#FFBF47" stroke-width="3"/>
+  </g>
+
+  <!-- Subtle vector handle lines -->
+  <path d="M14 22 C22 22, 26 18, 32 18" fill="none" stroke="#FFBF47" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="14" cy="22" r="2.5" fill="#FFBF47"/>
+</svg>

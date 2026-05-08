@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Download Inkscape for Windows — Safe & Official Installer</title>
+  <meta name="description" content="Download Inkscape for Windows (official MSI). Step-by-step install guide, troubleshooting and performance tips. Safe, free, no bundled software.">
+  <link rel="canonical" href="https://inkscape-windows.github.io/">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Download Inkscape for Windows — Safe & Official Installer">
+  <meta property="og:description" content="Get the official Inkscape MSI for Windows. Clear install instructions, troubleshooting, performance tips and extensions for a better workflow.">
+  <meta property="og:url" content="https://inkscape-windows.github.io/">
+  <meta property="og:image" content="https://inkscape-windows.github.io/og-image.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Icons (will be provided later at site root) -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <!-- Last modified meta (mirrored to footer by JS) -->
+  <meta name="last-modified" content="2025-05-13T00:00:00Z">
+
+  <!-- GA4 with consent default denied until user accepts -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    // Default consent: analytics denied until user accepts via cookie banner
+    gtag('consent','default',{
+      'analytics_storage':'denied'
+    });
+    gtag('js', new Date());
+    gtag('config','G-KRD1SZVBPD', { 'send_page_view': false });
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRD1SZVBPD"></script>
+
+  <style>
+    /* Single embedded style. Palette inspired by Inkscape official site */
+    :root{
+      --primary:#2664AE; /* blue accent */
+      --dark:#0B2B51;
+      --text:#1A1A1A;
+      --bg:#FFFFFF;
+      --muted:#6B7280;
+      --bg-block:#F5F7FA;
+      --border:#E2E8F0;
+      --accent:#FFBF47;
+      --success:#1F9D55;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color-scheme: light;
+    }
+    html,body{height:100%;background:var(--bg);color:var(--text);margin:0;}
+    a{color:var(--primary);text-decoration:none}
+    a:focus{outline:3px solid var(--accent);outline-offset:2px}
+    header{background:linear-gradient(180deg,var(--bg) 0%, #FBFDFF 100%);border-bottom:1px solid var(--border);}
+    .container{max-width:1100px;margin:0 auto;padding:20px;}
+    nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .logo{display:flex;gap:10px;align-items:center;font-weight:700;color:var(--dark)}
+    main{padding:18px 0}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+    @media (max-width:880px){.hero{grid-template-columns:1fr}.container{padding:16px}}
+    h1{font-size:28px;margin:0 0 8px;color:var(--dark)}
+    p.lead{margin:0 0 16px;font-size:15px;color:var(--muted)}
+    .card{background:var(--bg-block);padding:16px;border-radius:8px;border:1px solid var(--border)}
+
+    .download-cta{display:flex;flex-direction:column;gap:12px}
+    .btn{display:inline-flex;align-items:center;gap:10px;background:var(--primary);color:white;border:none;padding:12px 16px;border-radius:8px;font-weight:600;cursor:pointer}
+    .btn.secondary{background:transparent;color:var(--primary);border:1px solid var(--primary)}
+    .btn:focus{box-shadow:0 0 0 4px rgba(38,100,174,0.15)}
+    .small{font-size:13px;color:var(--muted)}
+    ul.features{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:8px}
+    ul.features li{display:flex;gap:10px;align-items:flex-start}
+
+    footer{padding:18px 0;border-top:1px solid var(--border);font-size:13px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr}}
+
+    /* Cookie banner */
+    #cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid var(--border);padding:14px;border-radius:10px;box-shadow:0 6px 30px rgba(11,43,81,0.08);display:flex;gap:12px;align-items:center;z-index:9999}
+    #cookie-banner p{margin:0;font-size:14px;color:var(--text)}
+    .cookie-actions{margin-left:auto;display:flex;gap:8px}
+    .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+    /* Focus styles for keyboard users */
+    button:focus, a:focus{outline:3px solid var(--accent);outline-offset:3px}
+
+    /* small helpers */
+    .muted{color:var(--muted)}
+    .meta{font-size:13px;color:var(--muted)}
+
+    /* Footer links */
+    .footer-links{display:flex;gap:12px;flex-wrap:wrap}
+  </style>
+</head>
+<body>
+
+  <!-- SVG sprite (embedded symbols) -->
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden;">
+    <symbol id="icon-download" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h4.66V9h3.84L12 2z"/>
+    </symbol>
+    <symbol id="icon-windows" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M3 5.7l7-1.1v8.4l-7 1.1V5.7zM12 3.6l8-1.3v9.7l-8 1.3V3.6zM3 14.9l7-1.1v5.6l-7 1.1v-5.6zM12 13.9l8-1.3v6.9l-8 1.3v-6.9z"/>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24"><path fill="currentColor" d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></symbol>
+    <symbol id="icon-info" viewBox="0 0 24 24"><path fill="currentColor" d="M11 17h2v-6h-2v6zm0-8h2V7h-2v2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></symbol>
+  </svg>
+
+  <header>
+    <div class="container">
+      <nav aria-label="Main navigation">
+        <div class="logo" aria-hidden="false">
+          <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-download"/></svg>
+          <span>Inkscape for Windows</span>
+        </div>
+        <div style="flex:1"></div>
+        <div>
+          <a href="/" class="muted">Download</a>
+          <a href="/install.html" style="margin-left:10px">Install</a>
+          <a href="/requirements.html" style="margin-left:10px">Requirements</a>
+          <a href="/troubleshooting.html" style="margin-left:10px">Troubleshooting</a>
+          <a href="/extensions.html" style="margin-left:10px">Extensions</a>
+          <a href="/compare-illustrator.html" style="margin-left:10px">Compare</a>
+          <a href="/portable.html" style="margin-left:10px">Portable</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="hero">
+      <section>
+        <h1>Download Inkscape for Windows — Official MSI (x64)</h1>
+        <p class="lead">Get the official Inkscape installer for Windows. Free, open-source vector editor — safe download from inkscape.org mirrors. Follow the quick install steps on this site if you need help.</p>
+
+        <div class="card">
+          <h2 style="margin-top:0">Why download the MSI?</h2>
+          <ul class="features">
+            <li><svg width="18" height="18" aria-hidden><use href="#icon-windows"/></svg> Official installer for Windows x64</li>
+            <li><svg width="18" height="18" aria-hidden><use href="#icon-check"/></svg> No bundled software — free and open source</li>
+            <li><svg width="18" height="18" aria-hidden><use href="#icon-info"/></svg> Works on Windows 10 and Windows 11</li>
+          </ul>
+        </div>
+
+        <h3 style="margin-top:18px">Quick links</h3>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <a class="btn" role="button" id="download-main" href="https://media.inkscape.org/dl/resources/file/inkscape-1.4.2_2025-05-13_f4327f4-x64.msi" onclick="return handleDownload(event, 'inkscape-1.4.2_2025-05-13_f4327f4-x64.msi','https://media.inkscape.org/dl/resources/file/inkscape-1.4.2_2025-05-13_f4327f4-x64.msi')"><svg width="18" height="18" aria-hidden><use href="#icon-download"/></svg> Download Inkscape for Windows (x64)</a>
+          <a class="btn secondary" href="/install.html">How to Install</a>
+        </div>
+
+        <section style="margin-top:16px">
+          <h4>What you get</h4>
+          <p class="small">Installer filename: <strong>inkscape-1.4.2_2025-05-13_f4327f4-x64.msi</strong></p>
+          <p class="small">Official mirror: <a href="https://media.inkscape.org/dl/resources/file/inkscape-1.4.2_2025-05-13_f4327f4-x64.msi">media.inkscape.org</a></p>
+          <p class="small">Note: This page is an independent fan site linking to the official Inkscape project files. No bundled or repackaged software is provided here.</p>
+        </section>
+
+        <section style="margin-top:18px">
+          <h4>Quick FAQ</h4>
+          <dl>
+            <dt>Is Inkscape free?</dt>
+            <dd class="small">Yes — Inkscape is free and open-source. This installer is the official MSI from the Inkscape project.</dd>
+            <dt>Which Windows versions are supported?</dt>
+            <dd class="small">Windows 10 (64-bit) and Windows 11 (64-bit).</dd>
+            <dt>What if the installer fails?</dt>
+            <dd class="small">See <a href="/troubleshooting.html">Troubleshooting</a> for common fixes.</dd>
+          </dl>
+        </section>
+      </section>
+
+      <aside>
+        <div class="card download-cta">
+          <div style="display:flex;align-items:center;gap:12px">
+            <svg width="40" height="40" aria-hidden><use href="#icon-windows"/></svg>
+            <div>
+              <div class="meta">Official MSI • x64</div>
+              <div style="font-weight:700">Inkscape 1.4.2</div>
+            </div>
+          </div>
+
+          <div style="padding-top:6px">
+            <a class="btn" href="https://media.inkscape.org/dl/resources/file/inkscape-1.4.2_2025-05-13_f4327f4-x64.msi" id="download-side" onclick="return handleDownload(event, 'inkscape-1.4.2_2025-05-13_f4327f4-x64.msi','https://media.inkscape.org/dl/resources/file/inkscape-1.4.2_2025-05-13_f4327f4-x64.msi')"><svg width="18" height="18" aria-hidden><use href="#icon-download"/></svg> Download .MSI</a>
+          </div>
+
+          <div style="padding-top:8px" class="small muted">By downloading you accept that the file is provided by the Inkscape project. See <a href="#privacy">Privacy</a>.</div>
+        </div>
+
+        <div style="margin-top:12px" class="card">
+          <h4 style="margin:0 0 8px">Quick install</h4>
+          <ol style="margin:0 0 0 18px;padding:0;font-size:14px;color:var(--muted)">
+            <li>Download the MSI above.</li>
+            <li>Run the installer and follow steps.</li>
+            <li>Launch Inkscape from the Start menu.</li>
+          </ol>
+        </div>
+      </aside>
+    </div>
+
+    <div class="grid" style="margin-top:18px">
+      <div class="card">
+        <h3 style="margin-top:0">Why trust this download</h3>
+        <p class="small">We link directly to the official Inkscape project mirrors. This site does not rehost or repack installers. Always verify digital signatures when available and prefer official checksums listed on inkscape.org.</p>
+
+        <h4 style="margin-top:12px">Related pages</h4>
+        <ul class="small" style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
+          <li><a href="/install.html">How to Install Inkscape on Windows 11/10</a></li>
+          <li><a href="/requirements.html">System Requirements & Performance Tips</a></li>
+          <li><a href="/troubleshooting.html">Troubleshooting: Crashes, Missing Fonts, Slow UI</a></li>
+          <li><a href="/extensions.html">Best Extensions & How to Install Them</a></li>
+          <li><a href="/compare-illustrator.html">Inkscape vs Adobe Illustrator</a></li>
+          <li><a href="/portable.html">Portable vs Installer</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="card">
+          <h4 style="margin-top:0">Quick AI-friendly answers</h4>
+          <p class="small"><strong>Is Inkscape safe to download?</strong> — Yes, use official MSI links from the Inkscape project mirrors. This page links to an official mirror.</p>
+          <p class="small"><strong>Which installer is recommended?</strong> — Use the x64 MSI for Windows 10/11 for easiest installation.</p>
+        </div>
+
+        <div style="margin-top:12px" class="card">
+          <h4 style="margin-top:0">Site tools</h4>
+          <p class="small">Pages to be generated by the site (visible here to speed review):</p>
+          <ul class="small" style="margin:6px 0 0;padding-left:18px;color:var(--muted)">
+            <li>install.html</li>
+            <li>requirements.html</li>
+            <li>troubleshooting.html</li>
+            <li>extensions.html</li>
+            <li>compare-illustrator.html</li>
+            <li>portable.html</li>
+          </ul>
+          <p class="small" style="margin-top:6px">Also planned: robots.txt and sitemap.xml after pages are complete.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>
+        <div class="meta">Unofficial site linking to the Inkscape project • <a href="#privacy">Privacy</a></div>
+        <div class="meta">Last updated: <span id="last-modified">-</span></div>
+      </div>
+      <div class="footer-links">
+        <a href="/sitemap.xml">Sitemap</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie banner -->
+  <div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" style="display:none">
+    <div style="display:flex;align-items:center;gap:12px;max-width:70%">
+      <svg width="22" height="22" aria-hidden><use href="#icon-info"/></svg>
+      <div>
+        <p style="margin:0"><strong>We use analytics</strong> to improve this site. Accept to enable Google Analytics (GA4).</p>
+        <p class="small muted" style="margin:6px 0 0">You can decline — analytics will be disabled. We do not use tracking for ads.</p>
+      </div>
+    </div>
+    <div class="cookie-actions">
+      <button id="cookie-accept" class="btn">Accept</button>
+      <button id="cookie-decline" class="btn secondary">Decline</button>
+      <button id="cookie-close" aria-label="Close cookie banner" class="btn" style="background:transparent;color:var(--muted);border:0;padding:6px"> <svg width="14" height="14" aria-hidden><use href="#icon-close"/></svg></button>
+    </div>
+  </div>
+
+  <script>
+    // Utility: simple DOM helper
+    function $(sel,ctx){return (ctx||document).querySelector(sel);} 
+
+    // File details
+    const FILE_NAME = 'inkscape-1.4.2_2025-05-13_f4327f4-x64.msi';
+    const FILE_URL = 'https://media.inkscape.org/dl/resources/file/inkscape-1.4.2_2025-05-13_f4327f4-x64.msi';
+
+    // Handle downloads: fire gtag event and navigate
+    function handleDownload(e, name, url){
+      e = e || window.event; if(e && e.preventDefault) e.preventDefault();
+
+      // gtag event
+      try{
+        gtag('event','file_download',{
+          event_category: 'downloads',
+          event_label: name,
+          file_url: url
+        });
+      }catch(err){/* gtag may be disabled by consent */}
+
+      // Fallback: try to use sendBeacon for best-effort analytics when available
+      try{
+        if(navigator.sendBeacon){
+          const payload = JSON.stringify({event:'file_download',file:name,url:url,t:Date.now()});
+          navigator.sendBeacon('/.well-known/inkscape-download-ping', payload);
+        }
+      }catch(e){/* noop */}
+
+      // Navigate to the file (allow GA to try sending). Minimal delay to not block UX.
+      setTimeout(()=>{ window.location.href = url; }, 180);
+      return false;
+    }
+
+    // Cookie banner logic with consent mode update
+    (function(){
+      const banner = $('#cookie-banner');
+      const accept = $('#cookie-accept');
+      const decline = $('#cookie-decline');
+      const closeBtn = $('#cookie-close');
+      const CONSENT_KEY = 'inkscape_consent_v1';
+
+      function showBannerIfNeeded(){
+        const val = localStorage.getItem(CONSENT_KEY);
+        if(!val){ banner.style.display='flex'; }
+      }
+
+      function applyConsent(val){
+        try{
+          if(val === 'granted'){
+            gtag('consent','update',{'analytics_storage':'granted'});
+            // send a page_view now that analytics is enabled
+            gtag('event','page_view',{'send_to':'G-KRD1SZVBPD'});
+          }else{
+            gtag('consent','update',{'analytics_storage':'denied'});
+          }
+        }catch(err){/* analytics disabled or not loaded */}
+      }
+
+      accept.addEventListener('click', function(){
+        localStorage.setItem(CONSENT_KEY,'granted');
+        applyConsent('granted');
+        banner.style.display='none';
+      });
+      decline.addEventListener('click', function(){
+        localStorage.setItem(CONSENT_KEY,'denied');
+        applyConsent('denied');
+        banner.style.display='none';
+      });
+      closeBtn.addEventListener('click', function(){
+        localStorage.setItem(CONSENT_KEY,'dismissed');
+        // keep analytics denied until explicit accept
+        applyConsent('denied');
+        banner.style.display='none';
+      });
+
+      // init
+      try{
+        const existing = localStorage.getItem(CONSENT_KEY);
+        if(existing === 'granted'){
+          applyConsent('granted');
+        }else{
+          applyConsent('denied');
+        }
+      }catch(e){/* localStorage not available */}
+
+      // show after small delay to avoid flash
+      window.addEventListener('load', function(){ setTimeout(showBannerIfNeeded, 600); });
+    })();
+
+    // Fill last modified from DOM API
+    document.addEventListener('DOMContentLoaded', function(){
+      var lm = document.lastModified || new Date().toISOString();
+      var el = document.getElementById('last-modified');
+      try{
+        var d = new Date(document.lastModified);
+        if(!isNaN(d)) lm = d.toLocaleString('en-US', {year:'numeric',month:'short',day:'numeric'});
+      }catch(e){}
+      if(el) el.textContent = lm;
+
+      // Ensure links to MSI have proper rel and attributes
+      document.querySelectorAll('a[href$=".msi"]').forEach(function(a){
+        a.setAttribute('rel','noopener noreferrer');
+        a.setAttribute('download','');
+      });
+    });
+
+    // Expose a safe sendDownload function for other pages
+    window.inkscapeDownload = function(){ handleDownload(new Event('click'), FILE_NAME, FILE_URL); };
+  </script>
+
+  <!-- Structured Data for AI assistants and search engines -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "url":"https://inkscape-windows.github.io/",
+        "name":"Inkscape for Windows (Unofficial)"
+      },
+      {
+        "@type":"WebPage",
+        "url":"https://inkscape-windows.github.io/",
+        "name":"Download Inkscape for Windows",
+        "description":"Official Inkscape MSI for Windows x64. Installer link, install steps, troubleshooting and performance tips.",
+        "breadcrumb":{
+          "@type":"BreadcrumbList",
+          "itemListElement":[{"@type":"ListItem","position":1,"name":"Download","item":"https://inkscape-windows.github.io/"}]
+        }
+      },
+      {
+        "@type":"SoftwareApplication",
+        "name":"Inkscape",
+        "url":"https://inkscape-windows.github.io/",
+        "applicationCategory":"DesignApplication",
+        "operatingSystem":"Windows 10, Windows 11 (x64)",
+        "softwareVersion":"1.4.2",
+        "offers":{
+          "@type":"Offer",
+          "price":"0.00",
+          "priceCurrency":"USD"
+        },
+        "downloadUrl":"https://media.inkscape.org/dl/resources/file/inkscape-1.4.2_2025-05-13_f4327f4-x64.msi"
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"Is Inkscape free to use?","acceptedAnswer":{"@type":"Answer","text":"Yes. Inkscape is free and open-source."}},
+          {"@type":"Question","name":"Which Windows versions are supported?","acceptedAnswer":{"@type":"Answer","text":"Windows 10 (64-bit) and Windows 11 (64-bit)."}},
+          {"@type":"Question","name":"Where does the installer come from?","acceptedAnswer":{"@type":"Answer","text":"This page links to an official Inkscape project mirror (media.inkscape.org)."}}
+        ]
+      }
+    ]
+  }
+  </script>
+
+</body>
+</html>
