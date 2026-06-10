@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B2B51"/>
+      <stop offset="100%" style="stop-color:#2664AE"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#EEF3FA"/>
+      <stop offset="100%" style="stop-color:#ffffff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- BG -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1050" cy="80" r="200" fill="rgba(255,255,255,0.04)"/>
+  <circle cx="150" cy="550" r="180" fill="rgba(255,255,255,0.03)"/>
+
+  <!-- Card -->
+  <rect x="60" y="80" width="1080" height="470" rx="20" fill="url(#card)" opacity="0.97"/>
+
+  <!-- Logo box -->
+  <rect x="100" y="130" width="72" height="72" rx="14" fill="#2664AE"/>
+  <!-- Pen icon in logo -->
+  <path d="M136 146 L156 166 L148 174 L132 182 L140 166 Z" fill="#fff" opacity="0.95"/>
+  <path d="M132 182 L128 192 L138 188 Z" fill="#FFBF47"/>
+
+  <!-- Brand name -->
+  <text x="192" y="165" font-family="Inter,system-ui,sans-serif" font-size="22" font-weight="700" fill="#0B2B51">Inkscape for Windows</text>
+  <text x="192" y="192" font-family="Inter,system-ui,sans-serif" font-size="16" fill="#6B7280">inkscape-windows.github.io</text>
+
+  <!-- Headline -->
+  <text x="100" y="290" font-family="Inter,system-ui,sans-serif" font-size="52" font-weight="800" fill="#0B2B51">Download Inkscape</text>
+  <text x="100" y="352" font-family="Inter,system-ui,sans-serif" font-size="52" font-weight="800" fill="#2664AE">for Windows</text>
+
+  <!-- Subtext -->
+  <text x="100" y="410" font-family="Inter,system-ui,sans-serif" font-size="24" fill="#6B7280">Free vector graphics editor · Official MSI installer</text>
+  <text x="100" y="445" font-family="Inter,system-ui,sans-serif" font-size="24" fill="#6B7280">Windows 10 &amp; 11 · 64-bit · No bundled software</text>
+
+  <!-- CTA pill -->
+  <rect x="100" y="475" width="280" height="50" rx="25" fill="#2664AE"/>
+  <text x="240" y="506" font-family="Inter,system-ui,sans-serif" font-size="18" font-weight="700" fill="#fff" text-anchor="middle">⬇ Download Free</text>
+
+  <!-- Version badge -->
+  <rect x="430" y="480" width="180" height="40" rx="8" fill="#EEF3FA" stroke="#E2E8F0"/>
+  <text x="520" y="505" font-family="Inter,system-ui,sans-serif" font-size="15" fill="#2664AE" text-anchor="middle" font-weight="600">Version 1.4.4</text>
+</svg>

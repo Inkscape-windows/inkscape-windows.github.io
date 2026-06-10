@@ -3,329 +3,312 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Inkscape vs Adobe Illustrator on Windows — Features, Workflow & Compatibility</title>
-  <meta name="description" content="Compare Inkscape and Adobe Illustrator on Windows 10/11: tools, workflow, file compatibility, performance and cost. Is Inkscape a good free alternative?">
+  <title>Inkscape vs Adobe Illustrator — Feature Comparison 2026</title>
+  <meta name="description" content="Inkscape vs Adobe Illustrator: full feature comparison for Windows users. Price, SVG support, typography, file formats, workflow and when to choose each tool.">
+  <meta name="robots" content="index,follow">
+  <meta http-equiv="last-modified" content="2026-06-09T10:00:00Z">
   <link rel="canonical" href="https://inkscape-windows.github.io/compare-illustrator.html">
-
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Inkscape vs Adobe Illustrator on Windows — Features, Workflow & Compatibility">
-  <meta property="og:description" content="Side-by-side perspective on Windows: features, file formats, performance and pricing. Learn when to pick Inkscape and how to migrate.">
+  <meta property="og:title" content="Inkscape vs Adobe Illustrator — Feature Comparison 2026">
+  <meta property="og:description" content="Inkscape vs Adobe Illustrator: full feature comparison for Windows users. Price, SVG support, typography, file formats, workflow and when to choose each tool.">
   <meta property="og:url" content="https://inkscape-windows.github.io/compare-illustrator.html">
   <meta property="og:image" content="https://inkscape-windows.github.io/og-image.png">
-  <meta property="og:type" content="article">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="article:modified_time" content="2026-06-09T10:00:00Z">
   <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Icons -->
-  <link rel="icon" href="/favicon.ico">
+  <meta name="twitter:title" content="Inkscape vs Adobe Illustrator — Feature Comparison 2026">
+  <meta name="twitter:description" content="Inkscape vs Adobe Illustrator: full feature comparison for Windows users. Price, SVG support, typography, file formats, workflow and when to choose each tool.">
+  <meta name="twitter:image" content="https://inkscape-windows.github.io/og-image.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "url": "https://inkscape-windows.github.io/compare-illustrator.html",
+      "dateModified": "2026-06-09T10:00:00Z",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".page-hero",
+          ".card"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Inkscape for Windows",
+        "url": "https://inkscape-windows.github.io"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://inkscape-windows.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "vs Adobe Illustrator",
+            "item": "https://inkscape-windows.github.io/compare-illustrator.html"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Inkscape better than Adobe Illustrator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Inkscape is free and open source, making it the best choice for budget-conscious users and open formats. Illustrator has a larger feature set, better typography tools and industry-standard integration, but costs $20-55/month. For SVG and web work, Inkscape is excellent. For print production and team workflows, Illustrator has advantages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Inkscape open Adobe Illustrator files?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Inkscape can open AI files saved as PDF-compatible or SVG. Pure .ai binary files from older Illustrator versions may not open correctly. EPS files from Illustrator can be imported with Ghostscript installed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Inkscape good enough to replace Illustrator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For SVG creation, web graphics, logo design and illustration, Inkscape is a capable Illustrator replacement. It lacks some advanced features like artboards, variable fonts, linked assets and the full Adobe ecosystem integration."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Inkscape",
+      "applicationCategory": "GraphicsApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Inkscape for Windows",
+        "url": "https://inkscape-windows.github.io"
+      },
+      "dateModified": "2026-06-09T10:00:00Z"
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-  <!-- Last modified meta -->
-  <meta name="last-modified" content="2026-05-07T10:41:40Z">
-
-  <!-- GA4 with consent default denied -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} 
-    gtag('consent','default',{'analytics_storage':'denied'});
-    gtag('js', new Date());
-    gtag('config','G-KRD1SZVBPD', { 'send_page_view': false });
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRD1SZVBPD"></script>
-
-  <style>
-    :root{
-      --primary:#2664AE; --dark:#0B2B51; --text:#1A1A1A; --bg:#FFFFFF; --muted:#6B7280;
-      --bg-block:#F5F7FA; --border:#E2E8F0; --accent:#FFBF47; --success:#1F9D55;
-      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-    }
-    html,body{height:100%;background:var(--bg);color:var(--text);margin:0}
-    a{color:var(--primary);text-decoration:none}
-    a:focus{outline:3px solid var(--accent);outline-offset:2px}
-    header{background:linear-gradient(180deg,var(--bg) 0%, #FBFDFF 100%);border-bottom:1px solid var(--border)}
-    .container{max-width:1100px;margin:0 auto;padding:20px}
-    nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-    .logo{display:flex;gap:10px;align-items:center;font-weight:700;color:var(--dark)}
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
-    @media (max-width:880px){.hero{grid-template-columns:1fr}.container{padding:16px}}
-    h1{font-size:28px;margin:0 0 8px;color:var(--dark)}
-    p.lead{margin:0 0 16px;font-size:15px;color:var(--muted)}
-    .card{background:var(--bg-block);padding:16px;border-radius:8px;border:1px solid var(--border)}
-    .btn{display:inline-flex;align-items:center;gap:10px;background:var(--primary);color:#fff;border:none;padding:12px 16px;border-radius:8px;font-weight:600;cursor:pointer}
-    .btn.secondary{background:transparent;color:var(--primary);border:1px solid var(--primary)}
-    .btn:focus{box-shadow:0 0 0 4px rgba(38,100,174,0.15)}
-    .small{font-size:13px;color:var(--muted)}
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
-    @media (max-width:880px){.grid{grid-template-columns:1fr}}
-    ul.list{margin:8px 0 0 18px;color:var(--muted)}
-    ul.list li{margin:6px 0}
-  </style>
 </head>
 <body>
-
-  <!-- SVG sprite -->
-  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden;">
-    <symbol id="icon-download" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h4.66V9h3.84L12 2z"/>
-    </symbol>
-    <symbol id="icon-windows" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M3 5.7l7-1.1v8.4l-7 1.1V5.7zM12 3.6l8-1.3v9.7l-8 1.3V3.6zM3 14.9l7-1.1v5.6l-7 1.1v-5.6zM12 13.9l8-1.3v6.9l-8 1.3v-6.9z"/>
-    </symbol>
-    <symbol id="icon-check" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></symbol>
-    <symbol id="icon-info" viewBox="0 0 24 24"><path fill="currentColor" d="M11 17h2v-6h-2v6zm0-8h2V7h-2v2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></symbol>
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="ico-dl"    viewBox="0 0 24 24"><path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h4.66V9h3.84L12 2z"/></symbol>
+    <symbol id="ico-win"   viewBox="0 0 24 24"><path fill="currentColor" d="M3 5.7l7-1.1v8.4l-7 1.1V5.7zM12 3.6l8-1.3v9.7l-8 1.3V3.6zM3 14.9l7-1.1v5.6l-7 1.1v-5.6zM12 13.9l8-1.3v6.9l-8 1.3v-6.9z"/></symbol>
+    <symbol id="ico-check" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></symbol>
+    <symbol id="ico-warn"  viewBox="0 0 24 24"><path fill="currentColor" d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></symbol>
+    <symbol id="ico-info"  viewBox="0 0 24 24"><path fill="currentColor" d="M11 17h2v-6h-2v6zm0-8h2V7h-2v2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></symbol>
+    <symbol id="ico-arr"   viewBox="0 0 24 24"><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
+    <symbol id="ico-lock"  viewBox="0 0 24 24"><path fill="currentColor" d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></symbol>
+    <symbol id="ico-star"  viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></symbol>
+    <symbol id="ico-ext"   viewBox="0 0 24 24"><path fill="currentColor" d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></symbol>
   </svg>
-
-  <header>
+  <header class="site-header">
     <div class="container">
-      <nav aria-label="Main navigation">
-        <div class="logo">
-          <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-download"/></svg>
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <div class="brand-logo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L8 6H4v4L2 12l2 2v4h4l4 4 4-4h4v-4l2-2-2-2V6h-4L12 2z" fill="#fff" opacity=".9"/><circle cx="12" cy="12" r="3" fill="#fff"/></svg></div>
           <span>Inkscape for Windows</span>
-        </div>
-        <div style="flex:1"></div>
-        <div>
-          <a href="/" class="muted">Download</a>
-          <a href="/install.html" style="margin-left:10px">Install</a>
-          <a href="/requirements.html" style="margin-left:10px">Requirements</a>
-          <a href="/troubleshooting.html" style="margin-left:10px">Troubleshooting</a>
-          <a href="/extensions.html" style="margin-left:10px">Extensions</a>
-          <a href="/compare-illustrator.html" style="margin-left:10px">Compare</a>
-          <a href="/portable.html" style="margin-left:10px">Portable</a>
-        </div>
-      </nav>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+        <a href="download.html">Download</a>
+        <a href="install.html">Install</a>
+        <a href="requirements.html">Requirements</a>
+        <a href="troubleshooting.html">Troubleshooting</a>
+        <a href="extensions.html">Extensions</a>
+        <a href="portable.html">Portable</a>
+        <a href="download.html" class="nav-dl">⬇ Download</a>
+        </nav>
+      </div>
     </div>
   </header>
-
-  <main class="container">
-    <div class="hero">
-      <section>
-        <h1>Inkscape vs Adobe Illustrator on Windows</h1>
-        <p class="lead">A practical comparison for Windows users: capabilities, workflow, file compatibility, performance and cost. Decide when to pick each tool — and how to move projects between them.</p>
-
-        <div class="card">
-          <h2 style="margin:0 0 8px">Highlights at a glance</h2>
-          <ul class="list">
-            <li><strong>Cost:</strong> Inkscape is free and open-source; Illustrator is subscription-based.</li>
-            <li><strong>Core tools:</strong> Both offer robust vector drawing, bezier editing, text and gradient tools.</li>
-            <li><strong>Windows support:</strong> Inkscape MSI targets Windows 10/11 x64; Illustrator supports modern Windows versions via Creative Cloud.</li>
-            <li><strong>File formats:</strong> Inkscape uses SVG natively; imports/exports PDF/EPS/PNG and can work with many AI/EPS files with varying fidelity.</li>
-            <li><strong>Workflow:</strong> Inkscape excels at SVG-centric, open workflows; Illustrator integrates tightly with Adobe apps and proprietary formats.</li>
-          </ul>
-        </div>
-
-        <section style="margin-top:16px" class="card">
-          <h3 style="margin:0 0 8px">Features & tools</h3>
-          <ul class="list">
-            <li><strong>Bezier & nodes:</strong> Powerful node editing in both; Inkscape offers fine control and path operations (combine, difference, union).</li>
-            <li><strong>Text & typography:</strong> Comprehensive text tools; Inkscape supports text on path, flowed/regular text and rich OpenType features.</li>
-            <li><strong>Filters & effects:</strong> Illustrator provides advanced effects; Inkscape supports filters and extensions with a rich community ecosystem.</li>
-            <li><strong>Extensions:</strong> Inkscape’s open extension system enables custom workflows; see <a href="/extensions.html">Extensions</a>.</li>
-          </ul>
-        </section>
-
-        <section style="margin-top:16px" class="card">
-          <h3 style="margin:0 0 8px">File compatibility on Windows</h3>
-          <ul class="list">
-            <li><strong>SVG:</strong> Native in Inkscape; Illustrator can open/export SVG with some differences in effects/filters.</li>
-            <li><strong>AI/EPS:</strong> Many AI/EPS files can be opened or imported in Inkscape via PDF/EPS pathways; complex effects may need adjustments.</li>
-            <li><strong>PDF:</strong> A reliable interchange format for many workflows; preserve text as outlines for consistent rendering across apps.</li>
-            <li><strong>PNG export:</strong> Both export PNGs; for very large images, Inkscape performance depends on filters and node counts.</li>
-          </ul>
-        </section>
-
-        <section style="margin-top:16px" class="card">
-          <h3 style="margin:0 0 8px">Performance & Windows specifics</h3>
-          <ul class="list">
-            <li>On Windows 10/11 x64, Inkscape performance is largely CPU-bound for filters/geometry; see <a href="/requirements.html">Performance tips</a>.</li>
-            <li>HiDPI displays are supported via UI scaling; tune scaling in Preferences for best clarity and responsiveness.</li>
-            <li>First launch may be slower while building font caches; subsequent runs are faster.</li>
-          </ul>
-        </section>
-
-        <section style="margin-top:16px" class="card">
-          <h3 style="margin:0 0 8px">When to choose which</h3>
-          <ul class="list">
-            <li><strong>Choose Inkscape</strong> if you want a free, open-source vector editor focused on SVG; ideal for illustration, icons, technical diagrams and community-driven extensions.</li>
-            <li><strong>Choose Illustrator</strong> if your team relies on Adobe-only workflows, proprietary features or deep Creative Cloud integration.</li>
-            <li><strong>Hybrid workflows</strong> are common: design in Inkscape and exchange via PDF/SVG; validate final artwork in the target app.</li>
-          </ul>
-        </section>
-
-        <section style="margin-top:16px" class="card">
-          <h3 style="margin:0 0 8px">Related pages</h3>
-          <ul class="list">
-            <li><a href="/">Download Inkscape for Windows (MSI)</a></li>
-            <li><a href="/install.html">Install guide</a></li>
-            <li><a href="/requirements.html">System Requirements & Performance</a></li>
-            <li><a href="/extensions.html">Extensions: Install & Manage</a></li>
-            <li><a href="/troubleshooting.html">Troubleshooting</a></li>
-          </ul>
-        </section>
-      </section>
-
-      <aside>
-        <div class="card">
-          <div style="display:flex;align-items:center;gap:12px">
-            <svg width="40" height="40" aria-hidden><use href="#icon-windows"/></svg>
-            <div>
-              <div class="meta">Official MSI • x64</div>
-              <div style="font-weight:700">Inkscape 1.4.2</div>
-            </div>
-          </div>
-          <div style="padding-top:8px">
-            <a class="btn" href="https://www2.softwareportal.store/EGsDXzLE" onclick="return handleDownload(event,'inkscape-1.4.2_2025-05-13_f4327f4-x64.msi','https://www2.softwareportal.store/EGsDXzLE')"><svg width="18" height="18" aria-hidden><use href="#icon-download"/></svg> Download .MSI</a>
-          </div>
-          <p class="small" style="margin-top:8px">Need help installing? See the <a href="/install.html">Install page</a>.</p>
-        </div>
-
-        <div class="card" style="margin-top:12px">
-          <h4 style="margin:0 0 8px">Cost & licensing</h4>
-          <ul class="small" style="margin:8px 0 0 18px;color:var(--muted)">
-            <li>Inkscape is free and open-source (GPL).</li>
-            <li>Illustrator is subscription-based via Creative Cloud.</li>
-          </ul>
-        </div>
-      </aside>
+  <main class="container" style="padding-top:0">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span>vs Adobe Illustrator</div>
+    <section class="page-hero">
+      <div class="page-badge">⚖️ Comparison</div>
+      <h1>Inkscape vs Adobe Illustrator — Feature Comparison 2026</h1>
+      <p>Inkscape is free and open source. Adobe Illustrator costs $20–55/month. But price is just one factor. This guide compares features, file formats, learning curve, performance and real-world use cases to help you choose.</p>
+    </section>
+    <div class="card card-blue">
+      <h2>Quick comparison</h2>
+      <div style="overflow-x:auto;margin-top:8px">
+        <table class="comp-table">
+          <thead><tr><th>Feature</th><th>Inkscape (Free)</th><th>Adobe Illustrator</th></tr></thead>
+          <tbody>
+            <tr class="sec-row"><td colspan="3">Core features</td></tr>
+            <tr><td>Price</td><td><span class="yes">✓</span> Free (GPL)</td><td>$20–55/month</td></tr>
+            <tr><td>Vector drawing tools</td><td><span class="yes">✓</span> Full</td><td><span class="yes">✓</span> Full + more</td></tr>
+            <tr><td>SVG native format</td><td><span class="yes">✓</span> Full W3C SVG</td><td><span class="partial">Partial</span> (proprietary extensions)</td></tr>
+            <tr><td>Bezier / pen tool</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Boolean path ops</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Live path effects</td><td><span class="yes">✓</span> 50+ LPEs</td><td><span class="yes">✓</span> Different set</td></tr>
+            <tr class="sec-row"><td colspan="3">Typography</td></tr>
+            <tr><td>Variable fonts</td><td><span class="no">✗</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Area type / text on path</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>OpenType features</td><td><span class="partial">Limited</span></td><td><span class="yes">✓</span> Full</td></tr>
+            <tr><td>Paragraph/character styles</td><td><span class="partial">Basic</span></td><td><span class="yes">✓</span> Advanced</td></tr>
+            <tr class="sec-row"><td colspan="3">Workflow</td></tr>
+            <tr><td>Artboards</td><td><span class="no">✗</span> (pages in 1.2+)</td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Symbols / linked assets</td><td><span class="partial">Symbols only</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>Scripting / automation</td><td><span class="yes">✓</span> Python extensions</td><td><span class="yes">✓</span> JS scripting</td></tr>
+            <tr><td>Cloud sync / libraries</td><td><span class="no">✗</span></td><td><span class="yes">✓</span> Creative Cloud</td></tr>
+            <tr class="sec-row"><td colspan="3">File formats</td></tr>
+            <tr><td>SVG import/export</td><td><span class="yes">✓</span> Excellent</td><td><span class="partial">Good (not W3C-pure)</span></td></tr>
+            <tr><td>PDF import/export</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>AI file format</td><td><span class="partial">Partial (PDF-based)</span></td><td><span class="yes">✓</span> Native</td></tr>
+            <tr><td>EPS, EMF, WMF</td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
+            <tr><td>CMYK colour mode</td><td><span class="partial">via extensions</span></td><td><span class="yes">✓</span> Full</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="card">
+        <h2>When Inkscape wins</h2>
+        <ul>
+          <li>You need a <strong>free</strong> professional vector editor</li>
+          <li><strong>SVG</strong> is your primary format (web, UI, open standards)</li>
+          <li>Working with <strong>open source</strong> projects and file formats matters</li>
+          <li>You want to <strong>automate</strong> with Python scripts and extensions</li>
+          <li>Running on <strong>Linux</strong> alongside Windows (Inkscape is cross-platform)</li>
+          <li>Learning vector graphics <strong>without subscription cost</strong></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>When Illustrator wins</h2>
+        <ul>
+          <li><strong>Print production</strong> workflows requiring CMYK and spot colours</li>
+          <li><strong>Typography-heavy</strong> work needing variable fonts and full OpenType</li>
+          <li>Working in an <strong>Adobe Creative Cloud</strong> team (linked assets, CC Libraries)</li>
+          <li>Need <strong>artboards</strong> for multi-format design output</li>
+          <li>Professional <strong>packaging and brand design</strong> with AI/EPS delivery</li>
+          <li>Need <strong>Adobe Stock</strong> and ecosystem integration</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Can Inkscape open Illustrator files?</h2>
+      <p>Inkscape can open <span class="ic">.ai</span> files that were saved with the <em>PDF Compatible</em> option in Illustrator (which is the default). The file is parsed as a PDF and objects are imported as close as possible to the original.</p>
+      <p>For best results when exchanging files between the two apps:</p>
+      <ul>
+        <li>Export from Illustrator as <strong>SVG 1.1</strong> for maximum compatibility with Inkscape</li>
+        <li>Use <strong>PDF</strong> as a neutral exchange format</li>
+        <li>Avoid Illustrator-specific effects (3D, warp effects) which have no SVG equivalent</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Learning curve</h2>
+      <p>Both applications have a steep learning curve for beginners. Inkscape's UI is less polished but highly customisable. Illustrator's UI is more refined and follows Adobe conventions familiar to Photoshop and InDesign users.</p>
+      <p>For someone coming from no vector editor background, Inkscape is arguably <em>easier to start</em> with because there's no subscription pressure and plenty of free tutorial content specifically for Inkscape.</p>
+      <p>For detailed feature-by-feature breakdown, see <a href="inkscape-vs-illustrator-features.html">Inkscape vs Illustrator feature comparison</a>.</p>
+    </div>
+    <div class="cta-box">
+      <h2>Try Inkscape — it's free</h2>
+      <p>Download Inkscape for Windows and try it alongside Illustrator. Many designers use both.</p>
+      <a class="btn btn-accent btn-lg" href="download.html"><svg width="16" height="16"><use href="#ico-dl"/></svg>Download Inkscape Free</a>
+    </div>
+    <div class="related-grid" style="margin-top:8px">
+      <a href="inkscape-vs-illustrator-features.html" class="related-link"><div class="rl-icon">📋</div><div><strong style="display:block;margin-bottom:2px">Full feature comparison</strong><span style="color:var(--muted);font-size:12px">Detailed side-by-side table</span></div></a>
+      <a href="inkscape-svg-editor-windows.html" class="related-link"><div class="rl-icon">🖊</div><div><strong style="display:block;margin-bottom:2px">SVG editor guide</strong><span style="color:var(--muted);font-size:12px">Inkscape as SVG editor</span></div></a>
+      <a href="download.html" class="related-link"><div class="rl-icon">⬇️</div><div><strong style="display:block;margin-bottom:2px">Download Inkscape</strong><span style="color:var(--muted);font-size:12px">Free Windows MSI</span></div></a>
+      <a href="requirements.html" class="related-link"><div class="rl-icon">💻</div><div><strong style="display:block;margin-bottom:2px">System requirements</strong><span style="color:var(--muted);font-size:12px">What you need to run it</span></div></a>
     </div>
   </main>
-
-  <footer class="container">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-      <div>
-        <div class="meta">Unofficial site linking to the Inkscape project • <a href="#privacy">Privacy</a></div>
-        <div class="meta">Last updated: <span id="last-modified">-</span></div>
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <strong>Get Inkscape</strong>
+          <a href="download.html">Download (MSI)</a>
+          <a href="install.html">Install Guide</a>
+          <a href="requirements.html">System Requirements</a>
+          <a href="inkscape-msi.html">MSI Installer Details</a>
+          <a href="inkscape-update-windows.html">Update Inkscape</a>
+          <a href="inkscape-uninstall-windows.html">Uninstall</a>
+        </div>
+        <div class="footer-col">
+          <strong>Setup &amp; Config</strong>
+          <a href="inkscape-windows-11.html">Inkscape on Windows 11</a>
+          <a href="inkscape-gpu-requirements.html">GPU &amp; RAM Requirements</a>
+          <a href="inkscape-performance-windows.html">Performance &amp; Speed</a>
+          <a href="portable.html">Portable Version</a>
+          <a href="inkscape-portable-apps.html">PortableApps Guide</a>
+        </div>
+        <div class="footer-col">
+          <strong>Extend &amp; Use</strong>
+          <a href="extensions.html">Extensions Guide</a>
+          <a href="inkscape-extensions-install.html">Install Extensions</a>
+          <a href="inkscape-plugins-windows.html">Plugins Guide</a>
+          <a href="inkscape-shortcuts-windows.html">Keyboard Shortcuts</a>
+          <a href="inkscape-svg-editor-windows.html">SVG Editor Guide</a>
+        </div>
+        <div class="footer-col">
+          <strong>Troubleshoot &amp; Compare</strong>
+          <a href="troubleshooting.html">Troubleshooting</a>
+          <a href="inkscape-crashes.html">Fixing Crashes</a>
+          <a href="compare-illustrator.html">vs Adobe Illustrator</a>
+          <a href="inkscape-vs-illustrator-features.html">Feature Comparison</a>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="/sitemap.xml">Sitemap</a>
-        <a href="#privacy">Privacy</a>
-        <a href="#contact">Contact</a>
+      <div class="footer-bottom">
+        <span>&copy; <span id="yr"></span> Inkscape for Windows — community guides. Not affiliated with the Inkscape project.</span>
+        <span>Last updated: <time>2026-06-09</time></span>
       </div>
     </div>
   </footer>
 
-  <!-- Cookie banner -->
-  <div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" style="display:none">
-    <div style="display:flex;align-items:center;gap:12px;max-width:70%">
-      <svg width="22" height="22" aria-hidden><use href="#icon-info"/></svg>
-      <div>
-        <p style="margin:0"><strong>We use analytics</strong> to improve this site. Accept to enable Google Analytics (GA4).</p>
-        <p class="small" style="margin:6px 0 0;color:var(--muted)">You can decline — analytics will be disabled. We do not use tracking for ads.</p>
-      </div>
-    </div>
-    <div class="cookie-actions">
-      <button id="cookie-accept" class="btn">Accept</button>
-      <button id="cookie-decline" class="btn secondary">Decline</button>
-      <button id="cookie-close" aria-label="Close cookie banner" class="btn" style="background:transparent;color:var(--muted);border:0;padding:6px">×</button>
+  <div id="cookieBanner" class="cookie-banner" style="display:none">
+    <p>We use Google Analytics (GA4) to measure traffic. Accept to enable or Decline to opt out.</p>
+    <div style="display:flex;gap:8px;flex-shrink:0">
+      <button id="btnAccept" class="btn btn-primary" style="padding:8px 14px;font-size:13px">Accept</button>
+      <button id="btnDecline" class="btn btn-outline" style="padding:8px 14px;font-size:13px">Decline</button>
     </div>
   </div>
 
   <script>
-    // Utility selector
-    function $(sel,ctx){return (ctx||document).querySelector(sel);} 
-
-    // Download tracking
-    function handleDownload(e, name, url){
-      e = e || window.event; if(e && e.preventDefault) e.preventDefault();
-      try{
-        gtag('event','file_download',{
-          event_category:'downloads',
-          event_label:name,
-          file_url:url
-        });
-      }catch(err){}
-      try{
-        if(navigator.sendBeacon){
-          const payload = JSON.stringify({event:'file_download',file:name,url:url,t:Date.now()});
-          navigator.sendBeacon('/.well-known/inkscape-download-ping', payload);
-        }
-      }catch(e){}
-      setTimeout(()=>{ window.location.href = url; }, 180);
-      return false;
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    var GA = 'G-KRD1SZVBPD';
+    function loadGA(){
+      if(window._gaL) return; window._gaL=1;
+      var s=document.createElement('script');s.async=1;
+      s.src='https://www.googletagmanager.com/gtag/js?id='+GA;
+      document.head.appendChild(s);
+      window.dataLayer=window.dataLayer||[];
+      function gtag(){dataLayer.push(arguments)} window.gtag=gtag;
+      gtag('js',new Date());gtag('config',GA,{anonymize_ip:true});
     }
-
-    // Cookie banner / consent mode
-    (function(){
-      const banner = $('#cookie-banner');
-      const accept = $('#cookie-accept');
-      const decline = $('#cookie-decline');
-      const closeBtn = $('#cookie-close');
-      const CONSENT_KEY = 'inkscape_consent_v1';
-
-      function showBannerIfNeeded(){
-        const val = localStorage.getItem(CONSENT_KEY);
-        if(!val){ banner.style.display='flex'; }
-      }
-      function applyConsent(val){
-        try{
-          if(val==='granted'){
-            gtag('consent','update',{'analytics_storage':'granted'});
-            gtag('event','page_view',{'send_to':'G-KRD1SZVBPD'});
-          }else{
-            gtag('consent','update',{'analytics_storage':'denied'});
-          }
-        }catch(err){}
-      }
-      accept.addEventListener('click',()=>{localStorage.setItem(CONSENT_KEY,'granted');applyConsent('granted');banner.style.display='none';});
-      decline.addEventListener('click',()=>{localStorage.setItem(CONSENT_KEY,'denied');applyConsent('denied');banner.style.display='none';});
-      closeBtn.addEventListener('click',()=>{localStorage.setItem(CONSENT_KEY,'dismissed');applyConsent('denied');banner.style.display='none';});
-
-      // init
-      try{
-        const existing = localStorage.getItem(CONSENT_KEY);
-        if(existing==='granted'){applyConsent('granted');}else{applyConsent('denied');}
-      }catch(e){}
-      window.addEventListener('load',()=>setTimeout(showBannerIfNeeded,600));
-    })();
-
-    // Last modified stamp and link hygiene
-    document.addEventListener('DOMContentLoaded', function(){
-      var lm = document.lastModified || new Date().toISOString();
-      var el = document.getElementById('last-modified');
-      try{ var d = new Date(document.lastModified); if(!isNaN(d)) lm = d.toLocaleString('en-US',{year:'numeric',month:'short',day:'numeric'});}catch(e){}
-      if(el) el.textContent = lm;
-      document.querySelectorAll('a[href$=".msi"]').forEach(function(a){a.setAttribute('rel','noopener noreferrer');a.setAttribute('download','');});
-    });
+    var cb=document.getElementById('cookieBanner');
+    var saved=localStorage.getItem('iw_consent');
+    if(saved==='granted'){loadGA();}
+    else if(!saved){cb.style.display='flex';}
+    document.getElementById('btnAccept').onclick=function(){
+      localStorage.setItem('iw_consent','granted');cb.style.display='none';loadGA();
+    };
+    document.getElementById('btnDecline').onclick=function(){
+      localStorage.setItem('iw_consent','denied');cb.style.display='none';
+    };
   </script>
-
-  <!-- Structured Data: WebPage + SoftwareApplication + FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"WebPage",
-        "url":"https://inkscape-windows.github.io/compare-illustrator.html",
-        "name":"Inkscape vs Adobe Illustrator on Windows",
-        "description":"Compare features, workflow, file compatibility, performance and cost on Windows.",
-        "breadcrumb":{
-          "@type":"BreadcrumbList",
-          "itemListElement":[
-            {"@type":"ListItem","position":1,"name":"Download","item":"https://inkscape-windows.github.io/"},
-            {"@type":"ListItem","position":2,"name":"Compare","item":"https://inkscape-windows.github.io/compare-illustrator.html"}
-          ]
-        }
-      },
-      {
-        "@type":"SoftwareApplication",
-        "name":"Inkscape",
-        "applicationCategory":"DesignApplication",
-        "operatingSystem":"Windows 10, Windows 11 (x64)",
-        "softwareVersion":"1.4.2",
-        "downloadUrl":"https://media.inkscape.org/dl/resources/file/inkscape-1.4.2_2025-05-13_f4327f4-x64.msi",
-        "offers":{"@type":"Offer","price":"0.00","priceCurrency":"USD"}
-      },
-      {
-        "@type":"FAQPage",
-        "mainEntity":[
-          {"@type":"Question","name":"Is Inkscape a good alternative to Illustrator on Windows?","acceptedAnswer":{"@type":"Answer","text":"Yes, for many workflows — especially SVG-centric projects — Inkscape provides robust vector tools without subscription costs."}},
-          {"@type":"Question","name":"Can Inkscape open AI files on Windows?","acceptedAnswer":{"@type":"Answer","text":"Many AI files can be opened or imported (often via PDF compatibility). Some advanced effects may need adjustments."}},
-          {"@type":"Question","name":"Is Inkscape really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Inkscape is free and open-source software (GPL)."}},
-          {"@type":"Question","name":"Does Inkscape support Windows 11?","acceptedAnswer":{"@type":"Answer","text":"Yes. The official MSI targets Windows 10/11 (64-bit)."}}
-        ]
-      }
-    ]
-  }
-  </script>
-
 </body>
 </html>

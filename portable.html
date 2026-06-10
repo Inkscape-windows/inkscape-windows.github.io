@@ -3,321 +3,308 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Inkscape Portable vs Installer for Windows — Pros, Cons & Setup</title>
-  <meta name="description" content="Should you use the portable version or the installer on Windows 10/11? Pros and cons, profile folders, common limitations and quick setup tips. Recommended path for most users.">
+  <title>Inkscape Portable for Windows — Run Without Installing</title>
+  <meta name="description" content="Download and run Inkscape portable on Windows without installation. USB drive setup, PortableApps integration, self-contained profile folder and update guide.">
+  <meta name="robots" content="index,follow">
+  <meta http-equiv="last-modified" content="2026-06-09T10:00:00Z">
   <link rel="canonical" href="https://inkscape-windows.github.io/portable.html">
-
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Inkscape Portable vs Installer for Windows — Pros, Cons & Setup">
-  <meta property="og:description" content="Compare portable vs installer on Windows. Learn when to use each, how to keep your profile tidy and update safely.">
+  <meta property="og:title" content="Inkscape Portable for Windows — Run Without Installing">
+  <meta property="og:description" content="Download and run Inkscape portable on Windows without installation. USB drive setup, PortableApps integration, self-contained profile folder and update guide.">
   <meta property="og:url" content="https://inkscape-windows.github.io/portable.html">
   <meta property="og:image" content="https://inkscape-windows.github.io/og-image.png">
-  <meta property="og:type" content="article">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="article:modified_time" content="2026-06-09T10:00:00Z">
   <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Icons -->
-  <link rel="icon" href="/favicon.ico">
+  <meta name="twitter:title" content="Inkscape Portable for Windows — Run Without Installing">
+  <meta name="twitter:description" content="Download and run Inkscape portable on Windows without installation. USB drive setup, PortableApps integration, self-contained profile folder and update guide.">
+  <meta name="twitter:image" content="https://inkscape-windows.github.io/og-image.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "url": "https://inkscape-windows.github.io/portable.html",
+      "dateModified": "2026-06-09T10:00:00Z",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".page-hero",
+          ".card"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Inkscape for Windows",
+        "url": "https://inkscape-windows.github.io"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://inkscape-windows.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Portable Version",
+            "item": "https://inkscape-windows.github.io/portable.html"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Inkscape",
+      "operatingSystem": "Windows 10, Windows 11",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "softwareVersion": "1.4.4",
+      "downloadUrl": "https://inkscape-windows.github.io/download.html",
+      "dateModified": "2026-06-09T10:00:00Z",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Inkscape for Windows",
+        "url": "https://inkscape-windows.github.io"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is there a portable version of Inkscape for Windows?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Inkscape is available as a portable zip that runs without installation. Extract to any folder or USB drive and run inkscape.exe directly. Settings are stored in the same folder."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between portable Inkscape and the MSI installer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The MSI installer integrates with Windows (file associations, Start Menu, uninstaller). The portable version needs no installation and can run from a USB drive, but does not register file associations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Inkscape Portable work with PortableApps?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. An official Inkscape Portable build is available on the PortableApps.com platform, which manages updates and integrates with the PortableApps launcher."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-  <!-- Last modified meta -->
-  <meta name="last-modified" content="2026-05-07T10:43:58Z">
-
-  <!-- GA4 with consent default denied -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} 
-    gtag('consent','default',{'analytics_storage':'denied'});
-    gtag('js', new Date());
-    gtag('config','G-KRD1SZVBPD', { 'send_page_view': false });
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRD1SZVBPD"></script>
-
-  <style>
-    :root{
-      --primary:#2664AE; --dark:#0B2B51; --text:#1A1A1A; --bg:#FFFFFF; --muted:#6B7280;
-      --bg-block:#F5F7FA; --border:#E2E8F0; --accent:#FFBF47; --success:#1F9D55;
-      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-    }
-    html,body{height:100%;background:var(--bg);color:var(--text);margin:0}
-    a{color:var(--primary);text-decoration:none}
-    a:focus{outline:3px solid var(--accent);outline-offset:2px}
-    header{background:linear-gradient(180deg,var(--bg) 0%, #FBFDFF 100%);border-bottom:1px solid var(--border)}
-    .container{max-width:1100px;margin:0 auto;padding:20px}
-    nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-    .logo{display:flex;gap:10px;align-items:center;font-weight:700;color:var(--dark)}
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
-    @media (max-width:880px){.hero{grid-template-columns:1fr}.container{padding:16px}}
-    h1{font-size:28px;margin:0 0 8px;color:var(--dark)}
-    p.lead{margin:0 0 16px;font-size:15px;color:var(--muted)}
-    .card{background:var(--bg-block);padding:16px;border-radius:8px;border:1px solid var(--border)}
-    .btn{display:inline-flex;align-items:center;gap:10px;background:var(--primary);color:#fff;border:none;padding:12px 16px;border-radius:8px;font-weight:600;cursor:pointer}
-    .btn.secondary{background:transparent;color:var(--primary);border:1px solid var(--primary)}
-    .btn:focus{box-shadow:0 0 0 4px rgba(38,100,174,0.15)}
-    .small{font-size:13px;color:var(--muted)}
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
-    @media (max-width:880px){.grid{grid-template-columns:1fr}}
-    ul.list{margin:8px 0 0 18px;color:var(--muted)}
-    ul.list li{margin:6px 0}
-
-    /* Cookie banner */
-    #cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid var(--border);padding:14px;border-radius:10px;box-shadow:0 6px 30px rgba(11,43,81,0.08);display:flex;gap:12px;align-items:center;z-index:9999}
-    #cookie-banner p{margin:0;font-size:14px;color:var(--text)}
-    .cookie-actions{margin-left:auto;display:flex;gap:8px}
-
-    .meta{font-size:13px;color:var(--muted)}
-    footer{padding:18px 0;border-top:1px solid var(--border)}
-  </style>
 </head>
 <body>
-
-  <!-- SVG sprite -->
-  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden;">
-    <symbol id="icon-download" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h4.66V9h3.84L12 2z"/>
-    </symbol>
-    <symbol id="icon-windows" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M3 5.7l7-1.1v8.4l-7 1.1V5.7zM12 3.6l8-1.3v9.7l-8 1.3V3.6zM3 14.9l7-1.1v5.6l-7 1.1v-5.6zM12 13.9l8-1.3v6.9l-8 1.3v-6.9z"/>
-    </symbol>
-    <symbol id="icon-check" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></symbol>
-    <symbol id="icon-info" viewBox="0 0 24 24"><path fill="currentColor" d="M11 17h2v-6h-2v6zm0-8h2V7h-2v2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></symbol>
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="ico-dl"    viewBox="0 0 24 24"><path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h4.66V9h3.84L12 2z"/></symbol>
+    <symbol id="ico-win"   viewBox="0 0 24 24"><path fill="currentColor" d="M3 5.7l7-1.1v8.4l-7 1.1V5.7zM12 3.6l8-1.3v9.7l-8 1.3V3.6zM3 14.9l7-1.1v5.6l-7 1.1v-5.6zM12 13.9l8-1.3v6.9l-8 1.3v-6.9z"/></symbol>
+    <symbol id="ico-check" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></symbol>
+    <symbol id="ico-warn"  viewBox="0 0 24 24"><path fill="currentColor" d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></symbol>
+    <symbol id="ico-info"  viewBox="0 0 24 24"><path fill="currentColor" d="M11 17h2v-6h-2v6zm0-8h2V7h-2v2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></symbol>
+    <symbol id="ico-arr"   viewBox="0 0 24 24"><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
+    <symbol id="ico-lock"  viewBox="0 0 24 24"><path fill="currentColor" d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></symbol>
+    <symbol id="ico-star"  viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></symbol>
+    <symbol id="ico-ext"   viewBox="0 0 24 24"><path fill="currentColor" d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></symbol>
   </svg>
-
-  <header>
+  <header class="site-header">
     <div class="container">
-      <nav aria-label="Main navigation">
-        <div class="logo">
-          <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-download"/></svg>
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <div class="brand-logo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L8 6H4v4L2 12l2 2v4h4l4 4 4-4h4v-4l2-2-2-2V6h-4L12 2z" fill="#fff" opacity=".9"/><circle cx="12" cy="12" r="3" fill="#fff"/></svg></div>
           <span>Inkscape for Windows</span>
-        </div>
-        <div style="flex:1"></div>
-        <div>
-          <a href="/" class="muted">Download</a>
-          <a href="/install.html" style="margin-left:10px">Install</a>
-          <a href="/requirements.html" style="margin-left:10px">Requirements</a>
-          <a href="/troubleshooting.html" style="margin-left:10px">Troubleshooting</a>
-          <a href="/extensions.html" style="margin-left:10px">Extensions</a>
-          <a href="/compare-illustrator.html" style="margin-left:10px">Compare</a>
-          <a href="/portable.html" style="margin-left:10px">Portable</a>
-        </div>
-      </nav>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+        <a href="download.html">Download</a>
+        <a href="install.html">Install</a>
+        <a href="requirements.html">Requirements</a>
+        <a href="troubleshooting.html">Troubleshooting</a>
+        <a href="extensions.html">Extensions</a>
+        <a href="portable.html" class="active">Portable</a>
+        <a href="download.html" class="nav-dl">⬇ Download</a>
+        </nav>
+      </div>
     </div>
   </header>
-
-  <main class="container">
-    <div class="hero">
-      <section>
-        <h1>Portable vs Installer on Windows</h1>
-        <p class="lead">Should you go portable or use the standard installer? Here’s a practical breakdown for Windows 10/11 users and quick guidance for each approach.</p>
-
-        <div class="card">
-          <h2 style="margin:0 0 8px">TL;DR — Which one should you choose?</h2>
-          <ul class="list">
-            <li><strong>Recommended for most:</strong> <em>Installer (MSI)</em>. Easiest setup, proper Start menu shortcuts and file associations.</li>
-            <li><strong>Portable is for:</strong> USB use, restricted PCs or testing separate versions without touching system settings.</li>
-            <li><strong>Portable limitations:</strong> No automatic file associations, fewer integrations; updates require manual folder replacement.</li>
+  <main class="container" style="padding-top:0">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span>Portable Version</div>
+    <section class="page-hero">
+      <div class="page-badge">💾 Portable</div>
+      <h1>Inkscape Portable for Windows — Run Without Installing</h1>
+      <p>Run Inkscape from a USB drive or any folder without installing it. The portable version keeps all settings self-contained, leaves no registry entries and works on any Windows PC without administrator rights.</p>
+    </section>
+    <div class="card card-blue">
+      <h2>Portable vs MSI installer — which to choose?</h2>
+      <div class="two-col" style="margin-top:12px">
+        <div style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:16px">
+          <h4 style="color:var(--dark);margin:0 0 10px">💾 Portable version</h4>
+          <ul style="font-size:13px;color:var(--muted);margin:0;padding-left:16px;line-height:1.8">
+            <li>No installation required</li>
+            <li>Runs from USB drive</li>
+            <li>No admin rights needed</li>
+            <li>Self-contained — no registry</li>
+            <li>No file associations (.svg opens in Inkscape)</li>
+            <li>Manual updates</li>
           </ul>
-          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
-            <a class="btn" href="https://www2.softwareportal.store/EGsDXzLE" onclick="return handleDownload(event,'inkscape-1.4.2_2025-05-13_f4327f4-x64.msi','https://www2.softwareportal.store/EGsDXzLE')"><svg width="18" height="18" aria-hidden><use href="#icon-download"/></svg> Download Installer (MSI)</a>
-            <a class="btn secondary" href="/install.html">Install guide</a>
-          </div>
-          <p class="small" style="margin-top:6px">This site links to the official Inkscape MSI from media.inkscape.org. Portable builds may exist from third parties — use only if you trust the source.</p>
         </div>
-
-        <section style="margin-top:16px" class="card">
-          <h3 style="margin:0 0 8px">Pros & cons</h3>
-          <ul class="list">
-            <li><strong>Installer (MSI) — Pros:</strong> Start menu shortcuts, file associations, cleaner updates/uninstall, system-wide availability (optionally).</li>
-            <li><strong>Installer (MSI) — Cons:</strong> Requires install rights on locked‑down PCs.</li>
-            <li><strong>Portable — Pros:</strong> Runs from any folder/USB, separate profiles per folder, zero impact on system install.</li>
-            <li><strong>Portable — Cons:</strong> No automatic associations or shortcuts; manual updates; some integrations may not be available.</li>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:8px;padding:16px">
+          <h4 style="color:var(--dark);margin:0 0 10px">📦 MSI installer</h4>
+          <ul style="font-size:13px;color:var(--muted);margin:0;padding-left:16px;line-height:1.8">
+            <li>Fully integrated with Windows</li>
+            <li>Start Menu and desktop shortcut</li>
+            <li>SVG files open in Inkscape automatically</li>
+            <li>Clean uninstaller</li>
+            <li>Easier updates</li>
+            <li>Requires admin rights to install</li>
           </ul>
-        </section>
-
-        <section style="margin-top:16px" class="card">
-          <h3 style="margin:0 0 8px">Keep your profile tidy (portable)</h3>
-          <ul class="list">
-            <li>Store the <em>profile/config</em> inside the portable folder if your build supports it; otherwise it may still use <code>%APPDATA%\Inkscape</code>.</li>
-            <li>Keep extensions in a subfolder (e.g., <code>portable\extensions</code>) to avoid mixing with your system profile.</li>
-            <li>When updating, back up your portable folder and replace binaries; re‑enable extensions as needed.</li>
-          </ul>
-        </section>
-
-        <section style="margin-top:16px" class="card">
-          <h3 style="margin:0 0 8px">Uninstall / remove</h3>
-          <ul class="list">
-            <li><strong>Installer:</strong> Use Windows “Apps & Features” to uninstall cleanly.</li>
-            <li><strong>Portable:</strong> Close the app and delete the portable folder. No registry cleanup is usually necessary.</li>
-          </ul>
-        </section>
-
-        <section style="margin-top:16px" class="card">
-          <h3 style="margin:0 0 8px">Related pages</h3>
-          <ul class="list">
-            <li><a href="/">Download Inkscape for Windows (MSI)</a></li>
-            <li><a href="/install.html">Install guide</a></li>
-            <li><a href="/requirements.html">System Requirements & Performance</a></li>
-            <li><a href="/troubleshooting.html">Troubleshooting</a></li>
-            <li><a href="/extensions.html">Extensions: Install & Manage</a></li>
-          </ul>
-        </section>
-      </section>
-
-      <aside>
-        <div class="card">
-          <div style="display:flex;align-items:center;gap:12px">
-            <svg width="40" height="40" aria-hidden><use href="#icon-windows"/></svg>
-            <div>
-              <div class="meta">Official MSI • x64</div>
-              <div style="font-weight:700">Inkscape 1.4.2</div>
-            </div>
-          </div>
-          <div style="padding-top:8px">
-            <a class="btn" href="https://www2.softwareportal.store/EGsDXzLE" onclick="return handleDownload(event,'inkscape-1.4.2_2025-05-13_f4327f4-x64.msi','https://www2.softwareportal.store/EGsDXzLE')"><svg width="18" height="18" aria-hidden><use href="#icon-download"/></svg> Download .MSI</a>
-          </div>
-          <p class="small" style="margin-top:8px">Prefer a plug‑and‑play route? Use the MSI for most Windows setups.</p>
         </div>
-      </aside>
+      </div>
+      <div class="tip" style="margin-top:14px"><strong>Recommendation:</strong> Use the MSI for your main PC. Use portable for USB/travel, shared/locked-down PCs or when you want zero system footprint.</div>
+    </div>
+    <div class="card">
+      <h2>Download Inkscape Portable</h2>
+      <h3>Option 1 — Official zip (from inkscape.org)</h3>
+      <p>Go to <a href="https://inkscape.org/release/" target="_blank" rel="noopener">inkscape.org/release</a>, select your version, choose <strong>Windows</strong> platform and download the <strong>.zip</strong> package (not the MSI).</p>
+      <p>Extract the zip to any folder — e.g. <span class="ic">D:\Inkscape</span> or a USB drive. Open the folder and double-click <span class="ic">inkscape.exe</span> to launch.</p>
+      <h3>Option 2 — PortableApps platform</h3>
+      <p>If you use the <a href="https://portableapps.com" target="_blank" rel="noopener">PortableApps.com</a> launcher, install Inkscape directly from the PortableApps app store. It manages updates and integrates with the launcher menu. See the dedicated <a href="inkscape-portable-apps.html">PortableApps guide</a>.</p>
+      <div class="info-box">
+        <svg width="16" height="16" style="color:var(--primary);flex-shrink:0;margin-top:1px"><use href="#ico-info"/></svg>
+        <p>The download page requires reCAPTCHA verification to protect the server. <a href="download.html">Go to download page →</a></p>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Setting up Inkscape Portable on a USB drive</h2>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><div class="step-body"><h4>Download the .zip file</h4><p>Get the Windows zip from inkscape.org/release. Choose the x64 version.</p></div></div>
+        <div class="step"><div class="step-num">2</div><div class="step-body"><h4>Extract to USB or folder</h4><p>Extract to your USB drive, e.g. <span class="ic">E:\Inkscape</span>. Keep the full folder structure intact.</p></div></div>
+        <div class="step"><div class="step-num">3</div><div class="step-body"><h4>Launch inkscape.exe</h4><p>Open the <span class="ic">bin</span> folder inside the extracted directory and double-click <span class="ic">inkscape.exe</span>. No installation or admin rights required.</p></div></div>
+        <div class="step"><div class="step-num">4</div><div class="step-body"><h4>Settings are stored locally</h4><p>By default, Inkscape portable stores preferences in <span class="ic">%APPDATA%\Inkscape</span> on the host PC. To make it fully portable (settings on USB), create a folder named <span class="ic">profile</span> inside the Inkscape folder — Inkscape will use it automatically.</p></div></div>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Make Inkscape fully self-contained (settings on USB)</h2>
+      <p>By default, even the portable build stores preferences in the Windows user profile. To make settings truly portable:</p>
+      <div class="code-block"><code># Create a "profile" folder next to inkscape.exe
+# (in the root of your Inkscape portable folder)
+mkdir E:\Inkscape\profile
+
+# Inkscape will detect this folder and store all
+# preferences, extensions and cache there instead
+# of %APPDATA%\Inkscape</code></div>
+      <div class="tip"><strong>Result:</strong> Your Inkscape settings, extensions and recently opened files all travel with the USB. Plug into any Windows 10/11 PC and get your exact setup.</div>
+    </div>
+    <div class="card">
+      <h2>Updating Inkscape Portable</h2>
+      <p>The portable version has no auto-updater. To update:</p>
+      <ol>
+        <li>Download the new version zip from inkscape.org</li>
+        <li>Extract to a new folder (keep the old one as backup)</li>
+        <li>Copy your <span class="ic">profile</span> folder from the old install to the new one</li>
+        <li>Test the new version, then delete the old folder</li>
+      </ol>
+      <p>If you use PortableApps, updates are handled automatically through the launcher.</p>
+    </div>
+    <div class="related-grid" style="margin-top:8px">
+      <a href="inkscape-portable-apps.html" class="related-link"><div class="rl-icon">🚀</div><div><strong style="display:block;margin-bottom:2px">PortableApps guide</strong><span style="color:var(--muted);font-size:12px">Managed portable install</span></div></a>
+      <a href="download.html" class="related-link"><div class="rl-icon">⬇️</div><div><strong style="display:block;margin-bottom:2px">Download Inkscape</strong><span style="color:var(--muted);font-size:12px">MSI and portable zip</span></div></a>
+      <a href="install.html" class="related-link"><div class="rl-icon">⚙️</div><div><strong style="display:block;margin-bottom:2px">MSI install guide</strong><span style="color:var(--muted);font-size:12px">Full Windows installation</span></div></a>
+      <a href="inkscape-update-windows.html" class="related-link"><div class="rl-icon">🔄</div><div><strong style="display:block;margin-bottom:2px">Update Inkscape</strong><span style="color:var(--muted);font-size:12px">Keep Inkscape current</span></div></a>
     </div>
   </main>
-
-  <footer class="container">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-      <div>
-        <div class="meta">Unofficial site linking to the Inkscape project • <a href="#privacy">Privacy</a></div>
-        <div class="meta">Last updated: <span id="last-modified">-</span></div>
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <strong>Get Inkscape</strong>
+          <a href="download.html">Download (MSI)</a>
+          <a href="install.html">Install Guide</a>
+          <a href="requirements.html">System Requirements</a>
+          <a href="inkscape-msi.html">MSI Installer Details</a>
+          <a href="inkscape-update-windows.html">Update Inkscape</a>
+          <a href="inkscape-uninstall-windows.html">Uninstall</a>
+        </div>
+        <div class="footer-col">
+          <strong>Setup &amp; Config</strong>
+          <a href="inkscape-windows-11.html">Inkscape on Windows 11</a>
+          <a href="inkscape-gpu-requirements.html">GPU &amp; RAM Requirements</a>
+          <a href="inkscape-performance-windows.html">Performance &amp; Speed</a>
+          <a href="portable.html">Portable Version</a>
+          <a href="inkscape-portable-apps.html">PortableApps Guide</a>
+        </div>
+        <div class="footer-col">
+          <strong>Extend &amp; Use</strong>
+          <a href="extensions.html">Extensions Guide</a>
+          <a href="inkscape-extensions-install.html">Install Extensions</a>
+          <a href="inkscape-plugins-windows.html">Plugins Guide</a>
+          <a href="inkscape-shortcuts-windows.html">Keyboard Shortcuts</a>
+          <a href="inkscape-svg-editor-windows.html">SVG Editor Guide</a>
+        </div>
+        <div class="footer-col">
+          <strong>Troubleshoot &amp; Compare</strong>
+          <a href="troubleshooting.html">Troubleshooting</a>
+          <a href="inkscape-crashes.html">Fixing Crashes</a>
+          <a href="compare-illustrator.html">vs Adobe Illustrator</a>
+          <a href="inkscape-vs-illustrator-features.html">Feature Comparison</a>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="/sitemap.xml">Sitemap</a>
-        <a href="#privacy">Privacy</a>
-        <a href="#contact">Contact</a>
+      <div class="footer-bottom">
+        <span>&copy; <span id="yr"></span> Inkscape for Windows — community guides. Not affiliated with the Inkscape project.</span>
+        <span>Last updated: <time>2026-06-09</time></span>
       </div>
     </div>
   </footer>
 
-  <!-- Cookie banner -->
-  <div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" style="display:none">
-    <div style="display:flex;align-items:center;gap:12px;max-width:70%">
-      <svg width="22" height="22" aria-hidden><use href="#icon-info"/></svg>
-      <div>
-        <p style="margin:0"><strong>We use analytics</strong> to improve this site. Accept to enable Google Analytics (GA4).</p>
-        <p class="small" style="margin:6px 0 0;color:var(--muted)">You can decline — analytics will be disabled. We do not use tracking for ads.</p>
-      </div>
-    </div>
-    <div class="cookie-actions">
-      <button id="cookie-accept" class="btn">Accept</button>
-      <button id="cookie-decline" class="btn secondary">Decline</button>
-      <button id="cookie-close" aria-label="Close cookie banner" class="btn" style="background:transparent;color:var(--muted);border:0;padding:6px">×</button>
+  <div id="cookieBanner" class="cookie-banner" style="display:none">
+    <p>We use Google Analytics (GA4) to measure traffic. Accept to enable or Decline to opt out.</p>
+    <div style="display:flex;gap:8px;flex-shrink:0">
+      <button id="btnAccept" class="btn btn-primary" style="padding:8px 14px;font-size:13px">Accept</button>
+      <button id="btnDecline" class="btn btn-outline" style="padding:8px 14px;font-size:13px">Decline</button>
     </div>
   </div>
 
   <script>
-    // Utility selector
-    function $(sel,ctx){return (ctx||document).querySelector(sel);} 
-
-    // Download tracking
-    function handleDownload(e, name, url){
-      e = e || window.event; if(e && e.preventDefault) e.preventDefault();
-      try{
-        gtag('event','file_download',{
-          event_category:'downloads',
-          event_label:name,
-          file_url:url
-        });
-      }catch(err){}
-      try{
-        if(navigator.sendBeacon){
-          const payload = JSON.stringify({event:'file_download',file:name,url:url,t:Date.now()});
-          navigator.sendBeacon('/.well-known/inkscape-download-ping', payload);
-        }
-      }catch(e){}
-      setTimeout(()=>{ window.location.href = url; }, 180);
-      return false;
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    var GA = 'G-KRD1SZVBPD';
+    function loadGA(){
+      if(window._gaL) return; window._gaL=1;
+      var s=document.createElement('script');s.async=1;
+      s.src='https://www.googletagmanager.com/gtag/js?id='+GA;
+      document.head.appendChild(s);
+      window.dataLayer=window.dataLayer||[];
+      function gtag(){dataLayer.push(arguments)} window.gtag=gtag;
+      gtag('js',new Date());gtag('config',GA,{anonymize_ip:true});
     }
-
-    // Cookie banner / consent mode
-    (function(){
-      const banner = $('#cookie-banner');
-      const accept = $('#cookie-accept');
-      const decline = $('#cookie-decline');
-      const closeBtn = $('#cookie-close');
-      const CONSENT_KEY = 'inkscape_consent_v1';
-
-      function showBannerIfNeeded(){
-        const val = localStorage.getItem(CONSENT_KEY);
-        if(!val){ banner.style.display='flex'; }
-      }
-      function applyConsent(val){
-        try{
-          if(val==='granted'){
-            gtag('consent','update',{'analytics_storage':'granted'});
-            gtag('event','page_view',{'send_to':'G-KRD1SZVBPD'});
-          }else{
-            gtag('consent','update',{'analytics_storage':'denied'});
-          }
-        }catch(err){}
-      }
-      accept.addEventListener('click',()=>{localStorage.setItem(CONSENT_KEY,'granted');applyConsent('granted');banner.style.display='none';});
-      decline.addEventListener('click',()=>{localStorage.setItem(CONSENT_KEY,'denied');applyConsent('denied');banner.style.display='none';});
-      closeBtn.addEventListener('click',()=>{localStorage.setItem(CONSENT_KEY,'dismissed');applyConsent('denied');banner.style.display='none';});
-
-      // init
-      try{
-        const existing = localStorage.getItem(CONSENT_KEY);
-        if(existing==='granted'){applyConsent('granted');}else{applyConsent('denied');}
-      }catch(e){}
-      window.addEventListener('load',()=>setTimeout(showBannerIfNeeded,600));
-    })();
-
-    // Last modified stamp and link hygiene
-    document.addEventListener('DOMContentLoaded', function(){
-      var lm = document.lastModified || new Date().toISOString();
-      var el = document.getElementById('last-modified');
-      try{ var d = new Date(document.lastModified); if(!isNaN(d)) lm = d.toLocaleString('en-US',{year:'numeric',month:'short',day:'numeric'});}catch(e){}
-      if(el) el.textContent = lm;
-      document.querySelectorAll('a[href$=".msi"]').forEach(function(a){a.setAttribute('rel','noopener noreferrer');a.setAttribute('download','');});
-    });
+    var cb=document.getElementById('cookieBanner');
+    var saved=localStorage.getItem('iw_consent');
+    if(saved==='granted'){loadGA();}
+    else if(!saved){cb.style.display='flex';}
+    document.getElementById('btnAccept').onclick=function(){
+      localStorage.setItem('iw_consent','granted');cb.style.display='none';loadGA();
+    };
+    document.getElementById('btnDecline').onclick=function(){
+      localStorage.setItem('iw_consent','denied');cb.style.display='none';
+    };
   </script>
-
-  <!-- Structured Data: WebPage + SoftwareApplication + FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"WebPage",
-        "url":"https://inkscape-windows.github.io/portable.html",
-        "name":"Inkscape Portable vs Installer for Windows",
-        "description":"Compare portable vs installer on Windows 10/11: pros and cons, profile folders and when to use each option.",
-        "breadcrumb":{
-          "@type":"BreadcrumbList",
-          "itemListElement":[
-            {"@type":"ListItem","position":1,"name":"Download","item":"https://inkscape-windows.github.io/"},
-            {"@type":"ListItem","position":2,"name":"Portable","item":"https://inkscape-windows.github.io/portable.html"}
-          ]
-        }
-      },
-      {
-        "@type":"SoftwareApplication",
-        "name":"Inkscape",
-        "applicationCategory":"DesignApplication",
-        "operatingSystem":"Windows 10, Windows 11 (x64)",
-        "softwareVersion":"1.4.2",
-        "downloadUrl":"https://media.inkscape.org/dl/resources/file/inkscape-1.4.2_2025-05-13_f4327f4-x64.msi",
-        "offers":{"@type":"Offer","price":"0.00","priceCurrency":"USD"}
-      },
-      {
-        "@type":"FAQPage",
-        "mainEntity":[
-          {"@type":"Question","name":"Which is better on Windows — portable or installer?","acceptedAnswer":{"@type":"Answer","text":"For most users, the installer (MSI) is recommended due to proper shortcuts, file associations and easier updates. Portable is useful for USB use or restricted PCs."}},
-          {"@type":"Question","name":"Does portable Inkscape work on Windows 11?","acceptedAnswer":{"@type":"Answer","text":"Yes, portable builds can run on Windows 10/11, but integration is limited compared to the MSI installer."}},
-          {"@type":"Question","name":"How do I uninstall portable Inkscape?","acceptedAnswer":{"@type":"Answer","text":"Close the app and delete the portable folder. No registry cleanup is usually necessary."}},
-          {"@type":"Question","name":"Where is my profile for portable?","acceptedAnswer":{"@type":"Answer","text":"Some portable builds keep config within the portable folder; otherwise, Inkscape may use %APPDATA%\\Inkscape. Check the build instructions."}}
-        ]
-      }
-    ]
-  }
-  </script>
-
 </body>
 </html>

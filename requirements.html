@@ -3,321 +3,324 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Inkscape for Windows — System Requirements, Performance Tips & Settings</title>
-  <meta name="description" content="System requirements for Inkscape on Windows 10/11 (x64). Recommended specs and performance tips: display modes, filters, paths, fonts, DPI and export settings.">
+  <title>Inkscape System Requirements for Windows — CPU, RAM, GPU Guide</title>
+  <meta name="description" content="Official Inkscape system requirements for Windows 10 and 11. Minimum and recommended CPU, RAM, GPU and disk space. Includes GPU requirements and display scaling tips.">
+  <meta name="robots" content="index,follow">
+  <meta http-equiv="last-modified" content="2026-06-09T10:00:00Z">
   <link rel="canonical" href="https://inkscape-windows.github.io/requirements.html">
-
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Inkscape for Windows — System Requirements, Performance Tips & Settings">
-  <meta property="og:description" content="Check minimum and recommended specs for Windows 10/11 and boost performance with practical settings and workflow tips.">
+  <meta property="og:title" content="Inkscape System Requirements for Windows — CPU, RAM, GPU Guide">
+  <meta property="og:description" content="Official Inkscape system requirements for Windows 10 and 11. Minimum and recommended CPU, RAM, GPU and disk space. Includes GPU requirements and display scaling tips.">
   <meta property="og:url" content="https://inkscape-windows.github.io/requirements.html">
   <meta property="og:image" content="https://inkscape-windows.github.io/og-image.png">
-  <meta property="og:type" content="article">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Icons -->
-  <link rel="icon" href="/favicon.ico">
+  <meta name="twitter:title" content="Inkscape System Requirements for Windows — CPU, RAM, GPU Guide">
+  <meta name="twitter:description" content="Official Inkscape system requirements for Windows 10 and 11. Minimum and recommended CPU, RAM, GPU and disk space. Includes GPU requirements and display scaling tips.">
+  <meta property="og:type" content="website">
+  <meta property="article:modified_time" content="2026-06-09T10:00:00Z">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "url": "https://inkscape-windows.github.io/requirements.html",
+      "dateModified": "2026-06-09T10:00:00Z",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "page-hero",
+          "card"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Inkscape for Windows",
+        "url": "https://inkscape-windows.github.io"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the system requirements for Inkscape on Windows?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Minimum: Windows 10 64-bit, 2 GB RAM, 500 MB disk, GPU with OpenGL 2.0. Recommended: Windows 11, 8 GB RAM, dedicated GPU, 2 GB disk."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much RAM does Inkscape need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Inkscape requires at least 2 GB RAM. For complex SVG files, 4–8 GB is recommended. Memory usage scales with document complexity and the number of objects."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Inkscape need a dedicated GPU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Inkscape requires a GPU with OpenGL 2.0 support. A dedicated GPU is recommended for smooth rendering but Intel integrated graphics works for basic use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are Inkscape GPU requirements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Any GPU with OpenGL 2.0 support. Dedicated NVIDIA or AMD GPU recommended for canvas acceleration. See the GPU requirements page for details."
+          }
+        }
+      ],
+      "dateModified": "2026-06-09T10:00:00Z"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://inkscape-windows.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Requirements",
+          "item": "https://inkscape-windows.github.io/requirements.html"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Inkscape",
+      "applicationCategory": "GraphicsApplication",
+      "operatingSystem": "Windows 10, Windows 11",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "softwareVersion": "1.4.4",
+      "downloadUrl": "https://inkscape-windows.github.io/download.html",
+      "dateModified": "2026-06-09T10:00:00Z",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Inkscape for Windows",
+        "url": "https://inkscape-windows.github.io"
+      }
+    }
+  ]
+}
+</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-
-  <!-- Last modified meta -->
-  <meta name="last-modified" content="2026-05-07T10:36:52Z">
-
-  <!-- GA4 with consent default denied -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);} 
-    gtag('consent','default',{'analytics_storage':'denied'});
-    gtag('js', new Date());
-    gtag('config','G-KRD1SZVBPD', { 'send_page_view': false });
-  </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRD1SZVBPD"></script>
-
-  <style>
-    :root{
-      --primary:#2664AE; --dark:#0B2B51; --text:#1A1A1A; --bg:#FFFFFF; --muted:#6B7280;
-      --bg-block:#F5F7FA; --border:#E2E8F0; --accent:#FFBF47; --success:#1F9D55;
-      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-    }
-    html,body{height:100%;background:var(--bg);color:var(--text);margin:0}
-    a{color:var(--primary);text-decoration:none}
-    a:focus{outline:3px solid var(--accent);outline-offset:2px}
-    header{background:linear-gradient(180deg,var(--bg) 0%, #FBFDFF 100%);border-bottom:1px solid var(--border)}
-    .container{max-width:1100px;margin:0 auto;padding:20px}
-    nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-    .logo{display:flex;gap:10px;align-items:center;font-weight:700;color:var(--dark)}
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
-    @media (max-width:880px){.hero{grid-template-columns:1fr}.container{padding:16px}}
-    h1{font-size:28px;margin:0 0 8px;color:var(--dark)}
-    p.lead{margin:0 0 16px;font-size:15px;color:var(--muted)}
-    .card{background:var(--bg-block);padding:16px;border-radius:8px;border:1px solid var(--border)}
-    .btn{display:inline-flex;align-items:center;gap:10px;background:var(--primary);color:#fff;border:none;padding:12px 16px;border-radius:8px;font-weight:600;cursor:pointer}
-    .btn.secondary{background:transparent;color:var(--primary);border:1px solid var(--primary)}
-    .btn:focus{box-shadow:0 0 0 4px rgba(38,100,174,0.15)}
-    .small{font-size:13px;color:var(--muted)}
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
-    @media (max-width:880px){.grid{grid-template-columns:1fr}}
-    ul.list{margin:8px 0 0 18px;color:var(--muted)}
-    ul.list li{margin:6px 0}
-
-    /* Cookie banner */
-    #cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid var(--border);padding:14px;border-radius:10px;box-shadow:0 6px 30px rgba(11,43,81,0.08);display:flex;gap:12px;align-items:center;z-index:9999}
-    #cookie-banner p{margin:0;font-size:14px;color:var(--text)}
-    .cookie-actions{margin-left:auto;display:flex;gap:8px}
-
-    .meta{font-size:13px;color:var(--muted)}
-    footer{padding:18px 0;border-top:1px solid var(--border)}
-  </style>
 </head>
 <body>
-
-  <!-- SVG sprite -->
-  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden;">
-    <symbol id="icon-download" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h4.66V9h3.84L12 2z"/>
-    </symbol>
-    <symbol id="icon-windows" viewBox="0 0 24 24">
-      <path fill="currentColor" d="M3 5.7l7-1.1v8.4l-7 1.1V5.7zM12 3.6l8-1.3v9.7l-8 1.3V3.6zM3 14.9l7-1.1v5.6l-7 1.1v-5.6zM12 13.9l8-1.3v6.9l-8 1.3v-6.9z"/>
-    </symbol>
-    <symbol id="icon-check" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></symbol>
-    <symbol id="icon-info" viewBox="0 0 24 24"><path fill="currentColor" d="M11 17h2v-6h-2v6zm0-8h2V7h-2v2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></symbol>
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="ico-dl" viewBox="0 0 24 24"><path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h4.66V9h3.84L12 2z"/></symbol>
+    <symbol id="ico-win" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5.7l7-1.1v8.4l-7 1.1V5.7zM12 3.6l8-1.3v9.7l-8 1.3V3.6zM3 14.9l7-1.1v5.6l-7 1.1v-5.6zM12 13.9l8-1.3v6.9l-8 1.3v-6.9z"/></symbol>
+    <symbol id="ico-check" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></symbol>
+    <symbol id="ico-warn" viewBox="0 0 24 24"><path fill="currentColor" d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></symbol>
+    <symbol id="ico-info" viewBox="0 0 24 24"><path fill="currentColor" d="M11 17h2v-6h-2v6zm0-8h2V7h-2v2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></symbol>
+    <symbol id="ico-arr" viewBox="0 0 24 24"><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
+    <symbol id="ico-lock" viewBox="0 0 24 24"><path fill="currentColor" d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></symbol>
   </svg>
-
-  <header>
+  <header class="site-header">
     <div class="container">
-      <nav aria-label="Main navigation">
-        <div class="logo">
-          <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-download"/></svg>
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <div class="brand-logo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L8 6H4v4L2 12l2 2v4h4l4 4 4-4h4v-4l2-2-2-2V6h-4L12 2z" fill="#fff" opacity=".9"/><circle cx="12" cy="12" r="3" fill="#fff"/></svg></div>
           <span>Inkscape for Windows</span>
-        </div>
-        <div style="flex:1"></div>
-        <div>
-          <a href="/" class="muted">Download</a>
-          <a href="/install.html" style="margin-left:10px">Install</a>
-          <a href="/requirements.html" style="margin-left:10px">Requirements</a>
-          <a href="/troubleshooting.html" style="margin-left:10px">Troubleshooting</a>
-          <a href="/extensions.html" style="margin-left:10px">Extensions</a>
-          <a href="/compare-illustrator.html" style="margin-left:10px">Compare</a>
-          <a href="/portable.html" style="margin-left:10px">Portable</a>
-        </div>
-      </nav>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="download.html">Download</a>
+        <a href="install.html">Install</a>
+        <a href="requirements.html" class="active">Requirements</a>
+        <a href="troubleshooting.html">Troubleshooting</a>
+        <a href="extensions.html">Extensions</a>
+        <a href="portable.html">Portable</a>
+        <a href="download.html" class="nav-dl">⬇ Download</a>
+        </nav>
+      </div>
     </div>
   </header>
-
-  <main class="container">
-    <div class="hero">
-      <section>
-        <h1>System Requirements & Performance Tips</h1>
-        <p class="lead">Check Windows compatibility and tune Inkscape for smooth editing and faster exports on your PC.</p>
-
-        <div class="card">
-          <h2 style="margin:0 0 8px">TL;DR Requirements</h2>
-          <ul class="list">
-            <li><strong>OS:</strong> Windows 10 or Windows 11 (64‑bit)</li>
-            <li><strong>CPU:</strong> Modern 64‑bit dual‑core (quad‑core recommended for heavy filters)</li>
-            <li><strong>RAM:</strong> 4 GB minimum (8 GB+ recommended for large SVGs)</li>
-            <li><strong>Disk:</strong> ~1 GB free for app + extra space for projects/exports</li>
-            <li><strong>Display:</strong> 1280×768+ (HiDPI supported via UI scaling)</li>
-          </ul>
-        </div>
-
-        <section style="margin-top:16px" class="card">
-          <h3 style="margin:0 0 8px">Compatibility</h3>
-          <ul class="list">
-            <li>Supported: Windows 10 (64‑bit) and Windows 11 (64‑bit).</li>
-            <li>Portable vs installer: installer is recommended for most users; see <a href="/portable.html">Portable vs Installer</a>.</li>
-            <li>File formats: native SVG; imports/exports include PNG, PDF and more.</li>
-          </ul>
-        </section>
-
-        <section style="margin-top:16px" class="card">
-          <h3 style="margin:0 0 8px">Performance tips (safe & effective)</h3>
-          <ul class="list">
-            <li><strong>Use lighter display modes:</strong> View → Display Mode → No Filters (or Outline) while editing; switch back to Normal for final checks.</li>
-            <li><strong>Reduce blur and heavy filters:</strong> Filters (blur, shadows) are CPU‑intensive. Use them sparingly or rasterize for export.</li>
-            <li><strong>Simplify complex paths:</strong> Path → Simplify to reduce node count; break huge shapes into smaller objects or layers.</li>
-            <li><strong>Organize layers:</strong> Hide non‑active layers to speed up redraws on large documents.</li>
-            <li><strong>Fonts & first launch:</strong> The first run may build a font cache; subsequent launches are faster. Remove broken fonts if startup remains slow.</li>
-            <li><strong>HiDPI scaling:</strong> Adjust UI scaling in Preferences if UI appears too small/large on 4K displays.</li>
-            <li><strong>Export wisely:</strong> For massive bitmaps, export in sections or at moderate DPI, then upscale with external tools if necessary.</li>
-          </ul>
-        </section>
-
-        <section style="margin-top:16px" class="card">
-          <h3 style="margin:0 0 8px">Troubleshooting pointers</h3>
-          <p class="small">If Inkscape feels slow or unstable, check <a href="/troubleshooting.html">Troubleshooting</a> for targeted fixes (crashes, missing fonts, slow UI, extensions).</p>
-        </section>
-
-        <section style="margin-top:16px" class="card">
-          <h3 style="margin:0 0 8px">FAQ</h3>
-          <ul class="list">
-            <li><strong>Does a dedicated GPU help?</strong> Inkscape is primarily CPU‑bound for filters and geometry. A faster CPU and more RAM usually help more than GPU upgrades.</li>
-            <li><strong>Is Windows 11 fully supported?</strong> Yes — the x64 MSI targets Windows 10/11.</li>
-            <li><strong>How to speed up zoom/pan?</strong> Use No Filters/Outline mode while editing; hide complex layers; simplify paths with many nodes.</li>
-          </ul>
-        </section>
-      </section>
-
-      <aside>
-        <div class="card">
-          <div style="display:flex;align-items:center;gap:12px">
-            <svg width="40" height="40" aria-hidden><use href="#icon-windows"/></svg>
-            <div>
-              <div class="meta">Official MSI • x64</div>
-              <div style="font-weight:700">Inkscape 1.4.2</div>
-            </div>
-          </div>
-          <div style="padding-top:8px">
-            <a class="btn" href="https://www2.softwareportal.store/EGsDXzLE" onclick="return handleDownload(event,'inkscape-1.4.2_2025-05-13_f4327f4-x64.msi','https://www2.softwareportal.store/EGsDXzLE')"><svg width="18" height="18" aria-hidden><use href="#icon-download"/></svg> Download .MSI</a>
-          </div>
-          <p class="small" style="margin-top:8px">Need installation help? See <a href="/install.html">Install guide</a>.</p>
-        </div>
-
-        <div class="card" style="margin-top:12px">
-          <h4 style="margin:0 0 8px">Related pages</h4>
-          <ul class="small" style="margin:8px 0 0 18px;color:var(--muted)">
-            <li><a href="/troubleshooting.html">Troubleshooting</a></li>
-            <li><a href="/extensions.html">Best Extensions</a></li>
-            <li><a href="/compare-illustrator.html">Inkscape vs Illustrator</a></li>
-          </ul>
-        </div>
-      </aside>
+  <main class="container" style="padding-top:0">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span>System Requirements</div>
+    <section class="page-hero">
+      <div class="page-badge">💻 System Requirements</div>
+      <h1>Inkscape System Requirements for Windows</h1>
+      <p>Official minimum and recommended system requirements for Inkscape 1.4.4 on Windows 10 and 11. Covers CPU, RAM, GPU, disk space, display and operating system requirements — with practical guidance for different use cases.</p>
+    </section>
+    <!-- QUICK TABLE -->
+    <div class="card card-blue" style="margin-bottom:20px">
+      <h2>Requirements at a glance</h2>
+      <div style="overflow-x:auto">
+        <table class="comp-table">
+          <thead><tr><th>Component</th><th>Minimum</th><th>Recommended</th><th>Heavy use / print</th></tr></thead>
+          <tbody>
+            <tr><td>Operating System</td><td>Windows 10 v1903 (64-bit)</td><td>Windows 11 (64-bit)</td><td>Windows 11 22H2+</td></tr>
+            <tr><td>CPU</td><td>Any 64-bit processor</td><td>Quad-core 2.5 GHz+</td><td>8-core 3.0 GHz+</td></tr>
+            <tr><td>RAM</td><td>2 GB</td><td>8 GB</td><td>16 GB+</td></tr>
+            <tr><td>GPU</td><td>OpenGL 2.0 (integrated OK)</td><td>Dedicated GPU 1 GB VRAM</td><td>Dedicated GPU 4 GB VRAM</td></tr>
+            <tr><td>Disk space</td><td>500 MB (install only)</td><td>2 GB (with extensions)</td><td>5 GB+ (large projects)</td></tr>
+            <tr><td>Display</td><td>1024×768</td><td>1920×1080</td><td>2560×1440 or higher</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="two-col">
+    <div class="card">
+      <h2>Operating system</h2>
+      <p>Inkscape 1.4.4 officially supports:</p>
+      <ul>
+        <li><strong>Windows 11</strong> — all editions (64-bit). Best experience.</li>
+        <li><strong>Windows 10</strong> version 1903 or later (64-bit). Fully supported.</li>
+      </ul>
+      <p><strong>32-bit Windows is not supported</strong> from Inkscape 1.0 onwards. If you are on a 32-bit system you must use Inkscape 0.91.</p>
+      <div class="tip"><strong>Windows 11 tip:</strong> Inkscape works great on Windows 11. See the <a href="inkscape-windows-11.html">Windows 11 specific guide</a> for display scaling and DPI tips.</div>
+    </div>
+    <div class="card">
+      <h2>RAM requirements</h2>
+      <p>Inkscape memory usage depends heavily on document complexity:</p>
+      <ul>
+        <li><strong>2 GB minimum</strong> — runs but may be sluggish on complex files</li>
+        <li><strong>4 GB</strong> — comfortable for most logos, icons, diagrams</li>
+        <li><strong>8 GB recommended</strong> — smooth with complex illustrations and many objects</li>
+        <li><strong>16 GB+</strong> — large print artwork, many embedded bitmaps, heavy extensions</li>
+      </ul>
+      <p>Inkscape loads the entire SVG document into memory. Files with thousands of paths, embedded high-resolution images or complex filters will use significantly more RAM.</p>
+      <a href="inkscape-gpu-requirements.html" style="font-size:13px">Detailed RAM &amp; GPU requirements →</a>
+    </div>
+    </div>
+    <div class="card">
+      <h2>GPU requirements</h2>
+      <p>Inkscape uses OpenGL for canvas rendering (GPU acceleration). The minimum requirement is any GPU with OpenGL 2.0 support — this includes most Intel integrated graphics chips from 2010 onwards.</p>
+      <div class="three-col" style="margin-top:12px">
+        <div class="feature-item"><h4>✅ Minimum</h4><p>Any GPU with <strong>OpenGL 2.0</strong>. Intel HD Graphics 4000+ works. Canvas rendering may be slow on complex files.</p></div>
+        <div class="feature-item"><h4>⭐ Recommended</h4><p><strong>Dedicated GPU</strong> with 1+ GB VRAM — NVIDIA GTX 1050+, AMD RX 560+, or Intel Iris Xe. Smooth canvas panning and zooming.</p></div>
+        <div class="feature-item"><h4>🚀 Heavy use</h4><p><strong>Modern dedicated GPU</strong> with 4+ GB VRAM. NVIDIA RTX series, AMD RX 6000+ for large print files and many bitmap effects.</p></div>
+      </div>
+      <div class="warn"><strong>No GPU / missing OpenGL:</strong> Inkscape may fall back to software rendering, which is significantly slower. Update your GPU drivers if the canvas feels sluggish. See <a href="inkscape-gpu-requirements.html">GPU requirements in detail</a>.</div>
+    </div>
+    <div class="card">
+      <h2>Processor (CPU) requirements</h2>
+      <p>Inkscape is primarily single-threaded — a faster single-core CPU has more impact than many cores. Most operations (path operations, filters, rendering) run on one core.</p>
+      <ul>
+        <li><strong>Any 64-bit x86 processor</strong> meets the minimum requirement</li>
+        <li><strong>Quad-core 2.5 GHz+</strong> recommended for comfortable everyday use</li>
+        <li>Extensions written in Python can use multiple cores in some cases</li>
+        <li>PDF export and some filters benefit from faster single-core performance</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Disk space</h2>
+      <ul>
+        <li><strong>~90 MB</strong> for the base MSI download</li>
+        <li><strong>~500 MB</strong> after installation (program files + fonts)</li>
+        <li><strong>~1–2 GB</strong> with extensions and additional fonts installed</li>
+        <li>Project files are SVG — very small for vector content, large if embedding bitmaps</li>
+      </ul>
+      <p>Inkscape stores extensions, preferences and cache in <span class="ic">%APPDATA%\Inkscape</span>. On systems with limited disk space, regularly clear the extension cache.</p>
+    </div>
+    <div class="card">
+      <h2>Display requirements</h2>
+      <ul>
+        <li>Minimum resolution: <strong>1024×768</strong></li>
+        <li>Recommended: <strong>1920×1080</strong> or higher</li>
+        <li>HiDPI / 4K displays: Inkscape supports Windows DPI scaling. Set scaling to 100% or 200% for best results (non-integer values may cause blurry UI)</li>
+        <li>Multiple monitors: fully supported — Inkscape can span or float across monitors</li>
+      </ul>
+    </div>
+    <div class="related-grid" style="margin-top:8px">
+      <a href="inkscape-gpu-requirements.html" class="related-link"><div class="rl-icon">🎮</div><div><strong style="display:block;margin-bottom:2px">GPU &amp; RAM details</strong><span style="color:var(--muted);font-size:12px">Detailed hardware guide</span></div></a>
+      <a href="inkscape-performance-windows.html" class="related-link"><div class="rl-icon">⚡</div><div><strong style="display:block;margin-bottom:2px">Performance tips</strong><span style="color:var(--muted);font-size:12px">Speed up Inkscape</span></div></a>
+      <a href="inkscape-windows-11.html" class="related-link"><div class="rl-icon">🪟</div><div><strong style="display:block;margin-bottom:2px">Windows 11 guide</strong><span style="color:var(--muted);font-size:12px">Win 11 specific tips</span></div></a>
+      <a href="troubleshooting.html" class="related-link"><div class="rl-icon">🛠</div><div><strong style="display:block;margin-bottom:2px">Troubleshooting</strong><span style="color:var(--muted);font-size:12px">Fix slow or crashing</span></div></a>
     </div>
   </main>
-
-  <footer class="container">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-      <div>
-        <div class="meta">Unofficial site linking to the Inkscape project • <a href="#privacy">Privacy</a></div>
-        <div class="meta">Last updated: <span id="last-modified">-</span></div>
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <strong>Get Inkscape</strong>
+          <a href="download.html">Download (MSI)</a>
+          <a href="install.html">Install Guide</a>
+          <a href="requirements.html">System Requirements</a>
+          <a href="inkscape-msi.html">MSI Installer Details</a>
+          <a href="inkscape-update-windows.html">Update Inkscape</a>
+          <a href="inkscape-uninstall-windows.html">Uninstall</a>
+        </div>
+        <div class="footer-col">
+          <strong>Setup &amp; Config</strong>
+          <a href="inkscape-windows-11.html">Inkscape on Windows 11</a>
+          <a href="inkscape-gpu-requirements.html">GPU &amp; RAM Requirements</a>
+          <a href="inkscape-performance-windows.html">Performance &amp; Speed</a>
+          <a href="portable.html">Portable Version</a>
+          <a href="inkscape-portable-apps.html">PortableApps Guide</a>
+        </div>
+        <div class="footer-col">
+          <strong>Extend &amp; Use</strong>
+          <a href="extensions.html">Extensions Guide</a>
+          <a href="inkscape-extensions-install.html">Install Extensions</a>
+          <a href="inkscape-plugins-windows.html">Plugins Guide</a>
+          <a href="inkscape-shortcuts-windows.html">Keyboard Shortcuts</a>
+          <a href="inkscape-svg-editor-windows.html">SVG Editor Guide</a>
+        </div>
+        <div class="footer-col">
+          <strong>Troubleshoot &amp; Compare</strong>
+          <a href="troubleshooting.html">Troubleshooting</a>
+          <a href="inkscape-crashes.html">Fixing Crashes</a>
+          <a href="compare-illustrator.html">vs Adobe Illustrator</a>
+          <a href="inkscape-vs-illustrator-features.html">Feature Comparison</a>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="/sitemap.xml">Sitemap</a>
-        <a href="#privacy">Privacy</a>
-        <a href="#contact">Contact</a>
+      <div class="footer-bottom">
+        <span>© <span id="yr"></span> Inkscape for Windows — community guides. Not affiliated with the Inkscape project.</span>
+        <span>Last updated: <time id="lastmod">June 9, 2026</time></span>
       </div>
     </div>
   </footer>
 
-  <!-- Cookie banner -->
-  <div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent" style="display:none">
-    <div style="display:flex;align-items:center;gap:12px;max-width:70%">
-      <svg width="22" height="22" aria-hidden><use href="#icon-info"/></svg>
-      <div>
-        <p style="margin:0"><strong>We use analytics</strong> to improve this site. Accept to enable Google Analytics (GA4).</p>
-        <p class="small" style="margin:6px 0 0;color:var(--muted)">You can decline — analytics will be disabled. We do not use tracking for ads.</p>
-      </div>
-    </div>
-    <div class="cookie-actions">
-      <button id="cookie-accept" class="btn">Accept</button>
-      <button id="cookie-decline" class="btn secondary">Decline</button>
-      <button id="cookie-close" aria-label="Close cookie banner" class="btn" style="background:transparent;color:var(--muted);border:0;padding:6px">×</button>
+  <div id="cookieBanner" class="cookie-banner" style="display:none">
+    <p>We use Google Analytics (GA4) to measure page traffic. Accept to enable analytics or decline to opt out.</p>
+    <div style="display:flex;gap:8px;flex-shrink:0">
+      <button id="btnAccept" class="btn btn-primary" style="padding:8px 14px;font-size:13px">Accept</button>
+      <button id="btnDecline" class="btn btn-outline" style="padding:8px 14px;font-size:13px">Decline</button>
     </div>
   </div>
 
   <script>
-    // Utility selector
-    function $(sel,ctx){return (ctx||document).querySelector(sel);} 
-
-    // Download tracking
-    function handleDownload(e, name, url){
-      e = e || window.event; if(e && e.preventDefault) e.preventDefault();
-      try{
-        gtag('event','file_download',{
-          event_category:'downloads',
-          event_label:name,
-          file_url:url
-        });
-      }catch(err){}
-      try{
-        if(navigator.sendBeacon){
-          const payload = JSON.stringify({event:'file_download',file:name,url:url,t:Date.now()});
-          navigator.sendBeacon('/.well-known/inkscape-download-ping', payload);
-        }
-      }catch(e){}
-      setTimeout(()=>{ window.location.href = url; }, 180);
-      return false;
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    var GA = 'G-KRD1SZVBPD';
+    function loadGA(){
+      if(window._gaL) return; window._gaL=1;
+      var s=document.createElement('script');s.async=1;
+      s.src='https://www.googletagmanager.com/gtag/js?id='+GA;
+      document.head.appendChild(s);
+      window.dataLayer=window.dataLayer||[];
+      function gtag(){dataLayer.push(arguments)} window.gtag=gtag;
+      gtag('js',new Date());gtag('config',GA,{anonymize_ip:true});
     }
-
-    // Cookie banner / consent mode
-    (function(){
-      const banner = $('#cookie-banner');
-      const accept = $('#cookie-accept');
-      const decline = $('#cookie-decline');
-      const closeBtn = $('#cookie-close');
-      const CONSENT_KEY = 'inkscape_consent_v1';
-
-      function showBannerIfNeeded(){
-        const val = localStorage.getItem(CONSENT_KEY);
-        if(!val){ banner.style.display='flex'; }
-      }
-      function applyConsent(val){
-        try{
-          if(val==='granted'){
-            gtag('consent','update',{'analytics_storage':'granted'});
-            gtag('event','page_view',{'send_to':'G-KRD1SZVBPD'});
-          }else{
-            gtag('consent','update',{'analytics_storage':'denied'});
-          }
-        }catch(err){}
-      }
-      accept.addEventListener('click',()=>{localStorage.setItem(CONSENT_KEY,'granted');applyConsent('granted');banner.style.display='none';});
-      decline.addEventListener('click',()=>{localStorage.setItem(CONSENT_KEY,'denied');applyConsent('denied');banner.style.display='none';});
-      closeBtn.addEventListener('click',()=>{localStorage.setItem(CONSENT_KEY,'dismissed');applyConsent('denied');banner.style.display='none';});
-
-      // init
-      try{
-        const existing = localStorage.getItem(CONSENT_KEY);
-        if(existing==='granted'){applyConsent('granted');}else{applyConsent('denied');}
-      }catch(e){}
-      window.addEventListener('load',()=>setTimeout(showBannerIfNeeded,600));
-    })();
-
-    // Last modified stamp and link hygiene
-    document.addEventListener('DOMContentLoaded', function(){
-      var lm = document.lastModified || new Date().toISOString();
-      var el = document.getElementById('last-modified');
-      try{ var d = new Date(document.lastModified); if(!isNaN(d)) lm = d.toLocaleString('en-US',{year:'numeric',month:'short',day:'numeric'});}catch(e){}
-      if(el) el.textContent = lm;
-      document.querySelectorAll('a[href$=".msi"]').forEach(function(a){a.setAttribute('rel','noopener noreferrer');a.setAttribute('download','');});
-    });
+    var cb=document.getElementById('cookieBanner');
+    var saved=localStorage.getItem('iw_consent');
+    if(saved==='granted'){loadGA();}
+    else if(!saved){cb.style.display='flex';}
+    document.getElementById('btnAccept').onclick=function(){
+      localStorage.setItem('iw_consent','granted');cb.style.display='none';loadGA();
+    };
+    document.getElementById('btnDecline').onclick=function(){
+      localStorage.setItem('iw_consent','denied');cb.style.display='none';
+    };
   </script>
-
-  <!-- Structured Data: WebPage + SoftwareApplication + FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"WebPage",
-        "url":"https://inkscape-windows.github.io/requirements.html",
-        "name":"Inkscape for Windows — System Requirements & Performance Tips",
-        "description":"Minimum and recommended specs for Windows 10/11 and tips to improve performance in Inkscape.",
-        "breadcrumb":{
-          "@type":"BreadcrumbList",
-          "itemListElement":[{"@type":"ListItem","position":1,"name":"Download","item":"https://inkscape-windows.github.io/"},{"@type":"ListItem","position":2,"name":"Requirements","item":"https://inkscape-windows.github.io/requirements.html"}]
-        }
-      },
-      {
-        "@type":"SoftwareApplication",
-        "name":"Inkscape",
-        "applicationCategory":"DesignApplication",
-        "operatingSystem":"Windows 10, Windows 11 (x64)",
-        "softwareVersion":"1.4.2",
-        "downloadUrl":"https://media.inkscape.org/dl/resources/file/inkscape-1.4.2_2025-05-13_f4327f4-x64.msi",
-        "offers":{"@type":"Offer","price":"0.00","priceCurrency":"USD"}
-      },
-      {
-        "@type":"FAQPage",
-        "mainEntity":[
-          {"@type":"Question","name":"What are the minimum requirements for Inkscape on Windows?","acceptedAnswer":{"@type":"Answer","text":"Windows 10/11 64-bit, dual-core CPU, 4 GB RAM, ~1 GB free disk space and 1280×768 display."}},
-          {"@type":"Question","name":"What specs are recommended for better performance?","acceptedAnswer":{"@type":"Answer","text":"Windows 10/11 64-bit, quad-core CPU, 8 GB+ RAM and fast SSD storage. Use No Filters/Outline display modes while editing heavy files."}},
-          {"@type":"Question","name":"Does Inkscape support Windows 11?","acceptedAnswer":{"@type":"Answer","text":"Yes. The x64 MSI targets Windows 10 and Windows 11."}}
-        ]
-      }
-    ]
-  }
-  </script>
-
 </body>
 </html>

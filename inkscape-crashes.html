@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fix Inkscape Crashes on Windows — GPU, Extensions &amp; Startup Fixes</title>
+  <meta name="description" content="Fix Inkscape crashes on Windows 10 and 11. Disable GPU acceleration, reset preferences, launch without extensions, update GPU drivers and clean reinstall.">
+  <meta name="robots" content="index,follow">
+  <meta http-equiv="last-modified" content="2026-06-09T10:00:00Z">
+  <link rel="canonical" href="https://inkscape-windows.github.io/inkscape-crashes.html">
+  <meta property="og:title" content="Fix Inkscape Crashes on Windows — GPU, Extensions &amp; Startup Fixes">
+  <meta property="og:description" content="Fix Inkscape crashes on Windows 10 and 11. Disable GPU acceleration, reset preferences, launch without extensions, update GPU drivers and clean reinstall.">
+  <meta property="og:url" content="https://inkscape-windows.github.io/inkscape-crashes.html">
+  <meta property="og:image" content="https://inkscape-windows.github.io/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="article:modified_time" content="2026-06-09T10:00:00Z">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fix Inkscape Crashes on Windows — GPU, Extensions &amp; Startup Fixes">
+  <meta name="twitter:description" content="Fix Inkscape crashes on Windows 10 and 11. Disable GPU acceleration, reset preferences, launch without extensions, update GPU drivers and clean reinstall.">
+  <meta name="twitter:image" content="https://inkscape-windows.github.io/og-image.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "url": "https://inkscape-windows.github.io/inkscape-crashes.html",
+      "dateModified": "2026-06-09T10:00:00Z",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".page-hero",
+          ".card"
+        ]
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Inkscape for Windows",
+        "url": "https://inkscape-windows.github.io"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://inkscape-windows.github.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Troubleshooting",
+            "item": "https://inkscape-windows.github.io/troubleshooting.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Crashes",
+            "item": "https://inkscape-windows.github.io/inkscape-crashes.html"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Inkscape",
+      "operatingSystem": "Windows 10, Windows 11",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "softwareVersion": "1.4.4",
+      "downloadUrl": "https://inkscape-windows.github.io/download.html",
+      "dateModified": "2026-06-09T10:00:00Z",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Inkscape for Windows",
+        "url": "https://inkscape-windows.github.io"
+      }
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Fix Inkscape Crashes on Windows",
+      "dateModified": "2026-06-09T10:00:00Z",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Disable GPU acceleration",
+          "text": "Edit > Preferences > Rendering > uncheck Use GPU acceleration. Restart."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Launch without extensions",
+          "text": "Run inkscape.exe --no-user-extensions to test without extensions."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Reset preferences",
+          "text": "Delete %APPDATA%\\Inkscape\\preferences.xml and restart."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Update GPU drivers",
+          "text": "Get latest drivers from NVIDIA/AMD/Intel."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Reinstall Inkscape",
+          "text": "Uninstall, delete AppData/Inkscape, reboot, reinstall."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why does Inkscape crash on Windows?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most Inkscape crashes are caused by GPU driver/OpenGL conflicts, broken extensions or corrupted preferences. Disable GPU acceleration first, then test without extensions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does Inkscape crash on startup?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Delete %APPDATA%\\Inkscape\\preferences.xml and restart. If still crashing, launch with --no-user-extensions. Reinstall if needed."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="ico-dl"    viewBox="0 0 24 24"><path fill="currentColor" d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v4h4.66V9h3.84L12 2z"/></symbol>
+    <symbol id="ico-check" viewBox="0 0 24 24"><path fill="currentColor" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></symbol>
+    <symbol id="ico-warn"  viewBox="0 0 24 24"><path fill="currentColor" d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></symbol>
+    <symbol id="ico-info"  viewBox="0 0 24 24"><path fill="currentColor" d="M11 17h2v-6h-2v6zm0-8h2V7h-2v2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></symbol>
+    <symbol id="ico-arr"   viewBox="0 0 24 24"><path fill="currentColor" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></symbol>
+    <symbol id="ico-lock"  viewBox="0 0 24 24"><path fill="currentColor" d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></symbol>
+    <symbol id="ico-ext"   viewBox="0 0 24 24"><path fill="currentColor" d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></symbol>
+    <symbol id="ico-star"  viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></symbol>
+  </svg>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a class="brand" href="index.html">
+          <div class="brand-logo"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L8 6H4v4L2 12l2 2v4h4l4 4 4-4h4v-4l2-2-2-2V6h-4L12 2z" fill="#fff" opacity=".9"/><circle cx="12" cy="12" r="3" fill="#fff"/></svg></div>
+          <span>Inkscape for Windows</span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+        <a href="download.html">Download</a>
+        <a href="install.html">Install</a>
+        <a href="requirements.html">Requirements</a>
+        <a href="troubleshooting.html">Troubleshooting</a>
+        <a href="extensions.html">Extensions</a>
+        <a href="portable.html">Portable</a>
+        <a href="download.html" class="nav-dl">⬇ Download</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main class="container" style="padding-top:0">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><a href="troubleshooting.html">Troubleshooting</a><span>›</span>Fix Crashes</div>
+    <section class="page-hero"><div class="page-badge">💥 Fix Crashes</div>
+    <h1>Fix Inkscape Crashes on Windows — 6 Solutions</h1>
+    <p>Fix Inkscape crashes and freezes on Windows 10 and 11. Covers GPU driver conflicts, broken extensions, corrupted preferences, crash-on-save and clean reinstall.</p></section>
+    <div class="card card-blue"><h2>Crash diagnosis</h2>
+    <table class="comp-table" style="margin-top:8px">
+      <thead><tr><th>When</th><th>Likely cause</th><th>Quick fix</th></tr></thead>
+      <tbody>
+        <tr><td>On startup</td><td>Corrupted preferences or extension</td><td>Delete preferences.xml</td></tr>
+        <tr><td>On canvas scroll/zoom</td><td>GPU driver / OpenGL conflict</td><td>Disable GPU acceleration</td></tr>
+        <tr><td>Applying filter</td><td>GPU memory or driver bug</td><td>Update GPU driver</td></tr>
+        <tr><td>On save</td><td>Permissions or corrupted SVG</td><td>Save as Plain SVG elsewhere</td></tr>
+        <tr><td>After new extension</td><td>Broken extension</td><td>Remove new extension</td></tr>
+      </tbody>
+    </table></div>
+    <div class="card"><h2>Fix 1 — Disable GPU acceleration</h2>
+    <p><strong>Edit → Preferences → Rendering</strong> → uncheck <em>Use GPU acceleration</em> → restart Inkscape.</p>
+    <div class="tip">Cannot open Preferences? Edit <span class="ic">%APPDATA%\Inkscape\preferences.xml</span> — set <span class="ic">renderbackend</span> value to <span class="ic">0</span>.</div></div>
+    <div class="card"><h2>Fix 2 — Launch without extensions</h2>
+    <div class="code-block"><code>"C:\Program Files\Inkscape\bin\inkscape.exe" --no-user-extensions</code></div>
+    <p>If stable, remove files from <span class="ic">%APPDATA%\Inkscape\extensions</span> one by one.</p></div>
+    <div class="card"><h2>Fix 3 — Reset preferences</h2>
+    <div class="code-block"><code># Win+R:
+%APPDATA%\Inkscape
+# Rename preferences.xml → preferences.xml.bak
+# Restart Inkscape</code></div>
+    <div class="warn">Resets all settings. Documents not affected.</div></div>
+    <div class="card"><h2>Fix 4 — Update GPU drivers</h2>
+    <ul>
+      <li><a href="https://www.nvidia.com/drivers" target="_blank" rel="noopener">NVIDIA drivers</a></li>
+      <li><a href="https://www.amd.com/support" target="_blank" rel="noopener">AMD drivers</a></li>
+      <li><a href="https://www.intel.com/content/www/us/en/support/detect.html" target="_blank" rel="noopener">Intel Driver Assistant</a></li>
+    </ul></div>
+    <div class="card"><h2>Fix 5 — Crash on save</h2>
+    <p><strong>File → Save a Copy → Plain SVG</strong> to Desktop. If successful, the original path has a permissions issue.</p></div>
+    <div class="card"><h2>Fix 6 — Clean reinstall</h2>
+    <ol><li>Uninstall via Settings → Apps</li><li>Delete <span class="ic">%APPDATA%\Inkscape</span></li><li>Reboot</li><li><a href="download.html">Install the latest MSI</a></li></ol></div>
+    <div class="related-grid" style="margin-top:8px">
+      <a href="troubleshooting.html" class="related-link"><div class="rl-icon">🛠</div><div><strong style="display:block;margin-bottom:2px">General troubleshooting</strong><span style="color:var(--muted);font-size:12px">Slow, blank canvas</span></div></a>
+      <a href="inkscape-gpu-requirements.html" class="related-link"><div class="rl-icon">🎮</div><div><strong style="display:block;margin-bottom:2px">GPU requirements</strong><span style="color:var(--muted);font-size:12px">OpenGL and drivers</span></div></a>
+      <a href="inkscape-performance-windows.html" class="related-link"><div class="rl-icon">⚡</div><div><strong style="display:block;margin-bottom:2px">Performance tips</strong><span style="color:var(--muted);font-size:12px">After fixing crashes</span></div></a>
+      <a href="install.html" class="related-link"><div class="rl-icon">⚙️</div><div><strong style="display:block;margin-bottom:2px">Reinstall guide</strong><span style="color:var(--muted);font-size:12px">Clean install</span></div></a>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <strong>Get Inkscape</strong>
+          <a href="download.html">Download (MSI)</a>
+          <a href="install.html">Install Guide</a>
+          <a href="requirements.html">System Requirements</a>
+          <a href="inkscape-msi.html">MSI Details</a>
+          <a href="inkscape-update-windows.html">Update Inkscape</a>
+          <a href="inkscape-uninstall-windows.html">Uninstall</a>
+        </div>
+        <div class="footer-col">
+          <strong>Setup &amp; Config</strong>
+          <a href="inkscape-windows-11.html">Windows 11 Guide</a>
+          <a href="inkscape-gpu-requirements.html">GPU &amp; RAM Requirements</a>
+          <a href="inkscape-performance-windows.html">Performance Tips</a>
+          <a href="portable.html">Portable Version</a>
+          <a href="inkscape-portable-apps.html">PortableApps Guide</a>
+        </div>
+        <div class="footer-col">
+          <strong>Extend &amp; Use</strong>
+          <a href="extensions.html">Extensions Guide</a>
+          <a href="inkscape-extensions-install.html">Install Extensions</a>
+          <a href="inkscape-plugins-windows.html">Plugins Guide</a>
+          <a href="inkscape-shortcuts-windows.html">Keyboard Shortcuts</a>
+          <a href="inkscape-svg-editor-windows.html">SVG Editor Guide</a>
+        </div>
+        <div class="footer-col">
+          <strong>Troubleshoot &amp; Compare</strong>
+          <a href="troubleshooting.html">Troubleshooting</a>
+          <a href="inkscape-crashes.html">Fix Crashes</a>
+          <a href="compare-illustrator.html">vs Adobe Illustrator</a>
+          <a href="inkscape-vs-illustrator-features.html">Feature Comparison</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="yr"></span> Inkscape for Windows — community guides. Not affiliated with the Inkscape project.</span>
+        <span>Last updated: <time>2026-06-09</time></span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cookieBanner" class="cookie-banner" style="display:none">
+    <p>We use Google Analytics (GA4) for anonymous traffic measurement. Accept to enable or Decline to opt out.</p>
+    <div style="display:flex;gap:8px;flex-shrink:0">
+      <button id="btnAccept" class="btn btn-primary" style="padding:8px 14px;font-size:13px">Accept</button>
+      <button id="btnDecline" class="btn btn-outline" style="padding:8px 14px;font-size:13px">Decline</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    var GA = 'G-KRD1SZVBPD';
+    function loadGA(){
+      if(window._gaL) return; window._gaL=1;
+      var s=document.createElement('script');s.async=1;
+      s.src='https://www.googletagmanager.com/gtag/js?id='+GA;
+      document.head.appendChild(s);
+      window.dataLayer=window.dataLayer||[];
+      function gtag(){dataLayer.push(arguments)} window.gtag=gtag;
+      gtag('js',new Date());gtag('config',GA,{anonymize_ip:true});
+    }
+    var cb=document.getElementById('cookieBanner');
+    var saved=localStorage.getItem('iw_consent');
+    if(saved==='granted'){loadGA();}
+    else if(!saved){cb.style.display='flex';}
+    document.getElementById('btnAccept').onclick=function(){localStorage.setItem('iw_consent','granted');cb.style.display='none';loadGA();};
+    document.getElementById('btnDecline').onclick=function(){localStorage.setItem('iw_consent','denied');cb.style.display='none';};
+  </script>
+</body>
+</html>
